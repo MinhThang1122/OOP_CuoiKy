@@ -17,15 +17,11 @@ namespace DoAn_CuoiKy
 			InitializeComponent();
 		}
 
-        deancuoikyEntities db = new deancuoikyEntities();
+        QuanLyThiTracNgiemEntities1 db = new QuanLyThiTracNgiemEntities1();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         C_User User = null;
         CauHoi cauHoi = null;
-        public FormTeacher()
-        {
-            InitializeComponent();
-        }
 
         private void FormTeacher_Load(object sender, EventArgs e)
         {
@@ -34,9 +30,9 @@ namespace DoAn_CuoiKy
         void loadCauHoi(List<CauHoi> x)
         {
             dataGridViewKQ.Columns.Add("MaCauHoi", "Ma Cau Hoi");
+            dataGridViewKQ.Columns.Add("NoiDung", "Noi Dung");
             dataGridViewKQ.Columns.Add("MaChuong", "Ma Chuong");
             dataGridViewKQ.Columns.Add("MaDeThi", "Ma De Thi");
-            dataGridViewKQ.Columns.Add("NoiDung", "Noi Dung");
             foreach (CauHoi CH in x)
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -69,8 +65,6 @@ namespace DoAn_CuoiKy
         private void btnThemCH_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMaCauHoi.Text) || string.IsNullOrWhiteSpace(txtMaCauHoi.Text)) return;
-            if (string.IsNullOrEmpty(txtMaChuong.Text) || string.IsNullOrWhiteSpace(txtMaChuong.Text)) return;
-            if (string.IsNullOrEmpty(txtMaDethi.Text) || string.IsNullOrWhiteSpace(txtMaDethi.Text)) return;
             if (string.IsNullOrEmpty(txtNoiDung.Text) || string.IsNullOrWhiteSpace(txtNoiDung.Text)) return;
             string macauhoi = txtMaCauHoi.Text;
             string machuong = txtMaChuong.Text;
@@ -102,7 +96,7 @@ namespace DoAn_CuoiKy
             row.Cells[3].Value = noidung;
             dataGridViewKQ.Rows.Add(row);
 
-            db.CauHois.add(cauHoi);
+            db.CauHois.Add(cauHoi);
             db.SaveChanges();
         }
 
@@ -126,7 +120,30 @@ namespace DoAn_CuoiKy
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string filter = string.Format("{0} like '{1}'", "Name", "*" + txtTenHS.Text + "*");
-            (dataGridViewHS.DataSource as ______).DefaultView.RowFilter = filter;
+            //(dataGridViewHS.DataSource as ______).DefaultView.RowFilter = filter;
         }
-    }
+
+		private void FormTeacher_Load_1(object sender, EventArgs e)
+		{
+			//lay ds loai sach
+			dsCauHoi = db.CauHois.ToList();
+
+			//hien thi len datagird
+			loadCauHoi(dsCauHoi);
+		}
+
+		private void dtaGridViewKQ_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			DataGridViewRow row = dataGridViewKQ.CurrentRow;
+			int index = row.Index;
+			if (index >= dsCauHoi.Count)
+				return;
+			//hien thi thong tin tren cac txt
+			cauHoi = dsCauHoi[index];
+			txtMaCauHoi.Text = cauHoi.MaCauHoi + "";
+			txtNoiDung.Text = cauHoi.NoiDungCauHoi;
+			txtMaChuong.Text = cauHoi.MaChuong;
+			txtMaDethi.Text = cauHoi.MaCauHoi;
+		}
+	}
 }

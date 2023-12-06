@@ -104,6 +104,7 @@
 			this.Controls.Add(this.txtTaiKhoan);
 			this.Name = "Form1";
 			this.Text = "Form_DangNhap";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
