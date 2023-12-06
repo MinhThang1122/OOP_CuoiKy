@@ -153,6 +153,9 @@
     <EmbeddedResource Include="FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTeacher.resx">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemTkUser.resx">
       <DependentUpon>FormThemTkUser.cs</DependentUpon>
     </EmbeddedResource>
