@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyThiTracNgiemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CuoiKy_OOPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="_User">
           <Key>
             <PropertyRef Name="MaUser" />
@@ -116,7 +116,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chuong__MaMonHoc__5AEE82B9">
+        <Association Name="FK__Chuong__MaMonHoc__48CFD27E">
           <End Role="MonHoc" Type="Self.MonHoc" Multiplicity="0..1" />
           <End Role="Chuong" Type="Self.Chuong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -152,7 +152,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__GiaoVien__MaUser__5CD6CB2B">
+        <Association Name="FK__GiaoVien__MaUser__4D94879B">
           <End Role="_User" Type="Self._User" Multiplicity="0..1" />
           <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -188,7 +188,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLyThiTracNgiemModelStoreContainer">
+        <EntityContainer Name="CuoiKy_OOPModelStoreContainer">
           <EntitySet Name="_User" EntityType="Self._User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CauHoi" EntityType="Self.CauHoi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Chuong" EntityType="Self.Chuong" Schema="dbo" store:Type="Tables" />
@@ -207,7 +207,7 @@
             <End Role="DeThi" EntitySet="DeThi" />
             <End Role="CauHoi" EntitySet="CauHoi" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chuong__MaMonHoc__5AEE82B9" Association="Self.FK__Chuong__MaMonHoc__5AEE82B9">
+          <AssociationSet Name="FK__Chuong__MaMonHoc__48CFD27E" Association="Self.FK__Chuong__MaMonHoc__48CFD27E">
             <End Role="MonHoc" EntitySet="MonHoc" />
             <End Role="Chuong" EntitySet="Chuong" />
           </AssociationSet>
@@ -219,7 +219,7 @@
             <End Role="GiaoVien" EntitySet="GiaoVien" />
             <End Role="DeThi" EntitySet="DeThi" />
           </AssociationSet>
-          <AssociationSet Name="FK__GiaoVien__MaUser__5CD6CB2B" Association="Self.FK__GiaoVien__MaUser__5CD6CB2B">
+          <AssociationSet Name="FK__GiaoVien__MaUser__4D94879B" Association="Self.FK__GiaoVien__MaUser__4D94879B">
             <End Role="_User" EntitySet="_User" />
             <End Role="GiaoVien" EntitySet="GiaoVien" />
           </AssociationSet>
@@ -236,7 +236,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="QuanLyThiTracNgiemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CuoiKy_OOPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="C_User">
           <Key>
             <PropertyRef Name="MaUser" />
@@ -245,7 +245,7 @@
           <Property Name="UserRoles" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="TenDN" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="MK" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="GiaoViens" Relationship="Self.FK__GiaoVien__MaUser__5CD6CB2B" FromRole="C_User" ToRole="GiaoVien" />
+          <NavigationProperty Name="GiaoViens" Relationship="Self.FK__GiaoVien__MaUser__4D94879B" FromRole="C_User" ToRole="GiaoVien" />
           <NavigationProperty Name="HocViens" Relationship="Self.FK__HocVien__MaUser__47DBAE45" FromRole="C_User" ToRole="HocVien" />
         </EntityType>
         <EntityType Name="CauHoi">
@@ -267,7 +267,7 @@
           <Property Name="MaChuong" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaMonHoc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CauHois" Relationship="Self.FK__CauHoi__MaChuong__49C3F6B7" FromRole="Chuong" ToRole="CauHoi" />
-          <NavigationProperty Name="MonHoc" Relationship="Self.FK__Chuong__MaMonHoc__5AEE82B9" FromRole="Chuong" ToRole="MonHoc" />
+          <NavigationProperty Name="MonHoc" Relationship="Self.FK__Chuong__MaMonHoc__48CFD27E" FromRole="Chuong" ToRole="MonHoc" />
         </EntityType>
         <EntityType Name="DapAn">
           <Key>
@@ -298,7 +298,7 @@
           <Property Name="HoTen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="MaUser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="C_User" Relationship="Self.FK__GiaoVien__MaUser__5CD6CB2B" FromRole="GiaoVien" ToRole="C_User" />
+          <NavigationProperty Name="C_User" Relationship="Self.FK__GiaoVien__MaUser__4D94879B" FromRole="GiaoVien" ToRole="C_User" />
           <NavigationProperty Name="DeThis" Relationship="Self.FK__DeThi__MaGiaoVie__4BAC3F29" FromRole="GiaoVien" ToRole="DeThi" />
         </EntityType>
         <EntityType Name="HocVien">
@@ -328,7 +328,7 @@
           </Key>
           <Property Name="MaMonHoc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenMonHoc" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Chuongs" Relationship="Self.FK__Chuong__MaMonHoc__5AEE82B9" FromRole="MonHoc" ToRole="Chuong" />
+          <NavigationProperty Name="Chuongs" Relationship="Self.FK__Chuong__MaMonHoc__48CFD27E" FromRole="MonHoc" ToRole="Chuong" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -340,7 +340,7 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK__GiaoVien__MaUser__5CD6CB2B">
+        <Association Name="FK__GiaoVien__MaUser__4D94879B">
           <End Role="C_User" Type="Self.C_User" Multiplicity="0..1" />
           <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="*" />
           <ReferentialConstraint>
@@ -400,7 +400,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chuong__MaMonHoc__5AEE82B9">
+        <Association Name="FK__Chuong__MaMonHoc__48CFD27E">
           <End Role="MonHoc" Type="Self.MonHoc" Multiplicity="0..1" />
           <End Role="Chuong" Type="Self.Chuong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -436,7 +436,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLyThiTracNgiemEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CuoiKy_OOPEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C_User" EntityType="Self.C_User" />
           <EntitySet Name="CauHois" EntityType="Self.CauHoi" />
           <EntitySet Name="Chuongs" EntityType="Self.Chuong" />
@@ -447,7 +447,7 @@
           <EntitySet Name="LopHocs" EntityType="Self.LopHoc" />
           <EntitySet Name="MonHocs" EntityType="Self.MonHoc" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <AssociationSet Name="FK__GiaoVien__MaUser__5CD6CB2B" Association="Self.FK__GiaoVien__MaUser__5CD6CB2B">
+          <AssociationSet Name="FK__GiaoVien__MaUser__4D94879B" Association="Self.FK__GiaoVien__MaUser__4D94879B">
             <End Role="C_User" EntitySet="C_User" />
             <End Role="GiaoVien" EntitySet="GiaoViens" />
           </AssociationSet>
@@ -467,7 +467,7 @@
             <End Role="CauHoi" EntitySet="CauHois" />
             <End Role="DapAn" EntitySet="DapAns" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chuong__MaMonHoc__5AEE82B9" Association="Self.FK__Chuong__MaMonHoc__5AEE82B9">
+          <AssociationSet Name="FK__Chuong__MaMonHoc__48CFD27E" Association="Self.FK__Chuong__MaMonHoc__48CFD27E">
             <End Role="MonHoc" EntitySet="MonHocs" />
             <End Role="Chuong" EntitySet="Chuongs" />
           </AssociationSet>
@@ -485,9 +485,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLyThiTracNgiemModelStoreContainer" CdmEntityContainer="QuanLyThiTracNgiemEntities1">
+        <EntityContainerMapping StorageEntityContainer="CuoiKy_OOPModelStoreContainer" CdmEntityContainer="CuoiKy_OOPEntities">
           <EntitySetMapping Name="C_User">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.C_User">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.C_User">
               <MappingFragment StoreEntitySet="_User">
                 <ScalarProperty Name="MaUser" ColumnName="MaUser" />
                 <ScalarProperty Name="UserRoles" ColumnName="UserRoles" />
@@ -497,7 +497,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CauHois">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.CauHoi">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.CauHoi">
               <MappingFragment StoreEntitySet="CauHoi">
                 <ScalarProperty Name="MaCauHoi" ColumnName="MaCauHoi" />
                 <ScalarProperty Name="NoiDungCauHoi" ColumnName="NoiDungCauHoi" />
@@ -507,7 +507,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Chuongs">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.Chuong">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.Chuong">
               <MappingFragment StoreEntitySet="Chuong">
                 <ScalarProperty Name="MaChuong" ColumnName="MaChuong" />
                 <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
@@ -515,7 +515,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DapAns">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.DapAn">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.DapAn">
               <MappingFragment StoreEntitySet="DapAn">
                 <ScalarProperty Name="MaDA" ColumnName="MaDA" />
                 <ScalarProperty Name="DungSai" ColumnName="DungSai" />
@@ -525,7 +525,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DeThis">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.DeThi">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.DeThi">
               <MappingFragment StoreEntitySet="DeThi">
                 <ScalarProperty Name="MaDeThi" ColumnName="MaDeThi" />
                 <ScalarProperty Name="NgayThi" ColumnName="NgayThi" />
@@ -535,7 +535,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="GiaoViens">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.GiaoVien">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.GiaoVien">
               <MappingFragment StoreEntitySet="GiaoVien">
                 <ScalarProperty Name="MaGiaoVien" ColumnName="MaGiaoVien" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -545,7 +545,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HocViens">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.HocVien">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.HocVien">
               <MappingFragment StoreEntitySet="HocVien">
                 <ScalarProperty Name="MaHocVien" ColumnName="MaHocVien" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -557,7 +557,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LopHocs">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.LopHoc">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.LopHoc">
               <MappingFragment StoreEntitySet="LopHoc">
                 <ScalarProperty Name="MaLopHoc" ColumnName="MaLopHoc" />
                 <ScalarProperty Name="TenLopHoc" ColumnName="TenLopHoc" />
@@ -565,7 +565,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MonHocs">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.MonHoc">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.MonHoc">
               <MappingFragment StoreEntitySet="MonHoc">
                 <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
                 <ScalarProperty Name="TenMonHoc" ColumnName="TenMonHoc" />
@@ -573,7 +573,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QuanLyThiTracNgiemModel.sysdiagram">
+            <EntityTypeMapping TypeName="CuoiKy_OOPModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />

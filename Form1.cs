@@ -20,10 +20,11 @@ namespace DoAn_CuoiKy
 
 		private void btnDangNhap_Click(object sender, EventArgs e)
 		{
-			SqlConnection loginCon = new SqlConnection("Data Source=LAPTOP-7H1PG1MJ\\MSSQLSERVER01;Initial Catalog=QuanLyThiTracNgiem;Integrated Security=True");
+			SqlConnection loginCon = new SqlConnection("Data Source=ASUSGHE;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
 			SqlCommand cmd = new SqlCommand("select * from _User where TenDN = '"+txtTaiKhoan.Text+"' and MK = '"+txtMatKhau.Text+"'",loginCon);
 			SqlDataAdapter sda = new SqlDataAdapter(cmd);
 			DataTable dt = new DataTable();
+
 			sda.Fill(dt);
 			string cmbItemValue = comboBox1.SelectedItem.ToString();
 
@@ -45,6 +46,7 @@ namespace DoAn_CuoiKy
 							FormStudent student = new FormStudent();
 							student.Show();
 							this.Hide();
+							
 						}
 						else
 						{
@@ -62,6 +64,9 @@ namespace DoAn_CuoiKy
 
 		}
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-	}
+        }
+    }
 }

@@ -16,5 +16,12 @@ namespace DoAn_CuoiKy
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void FormStudent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+    }
 }

@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormAdmin : Form
 	{
-		QuanLyThiTracNgiemEntities1 db = new QuanLyThiTracNgiemEntities1();
+        CuoiKy_OOPEntities db = new CuoiKy_OOPEntities();
 		List<C_User> dsUser	= new List<C_User>();
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();
