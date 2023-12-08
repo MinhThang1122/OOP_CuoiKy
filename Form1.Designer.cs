@@ -87,6 +87,7 @@
             "admin",
             "student",
             "teacher"});
+
             this.comboBox1.Location = new System.Drawing.Point(180, 217);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(201, 24);
@@ -108,6 +109,29 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
+			this.comboBox1.Location = new System.Drawing.Point(180, 217);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(201, 24);
+			this.comboBox1.TabIndex = 5;
+			// 
+			// Form1
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(623, 441);
+			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.btnDangNhap);
+			this.Controls.Add(this.lblMatKhau);
+			this.Controls.Add(this.lblTaiKhoan);
+			this.Controls.Add(this.txtMatKhau);
+			this.Controls.Add(this.txtTaiKhoan);
+			this.Name = "Form1";
+			this.Text = "Form_DangNhap";
+			this.Load += new System.EventHandler(this.Form1_Load);
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 
 		}
 
