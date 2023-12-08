@@ -77,6 +77,7 @@
             this.dataGridViewKQ.RowTemplate.Height = 24;
             this.dataGridViewKQ.Size = new System.Drawing.Size(628, 283);
             this.dataGridViewKQ.TabIndex = 16;
+            this.dataGridViewKQ.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtaGridViewKQ_CellClick);
             // 
             // panel2
             // 
