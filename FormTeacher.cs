@@ -17,15 +17,12 @@ namespace DoAn_CuoiKy
 			InitializeComponent();
 		}
 
-        deancuoikyEntities db = new deancuoikyEntities();
+        CuoiKy_OOPEntities db = new CuoiKy_OOPEntities();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         C_User User = null;
         CauHoi cauHoi = null;
-        public FormTeacher()
-        {
-            InitializeComponent();
-        }
+       
 
         private void FormTeacher_Load(object sender, EventArgs e)
         {
@@ -102,7 +99,7 @@ namespace DoAn_CuoiKy
             row.Cells[3].Value = noidung;
             dataGridViewKQ.Rows.Add(row);
 
-            db.CauHois.add(cauHoi);
+            db.CauHois.Add(cauHoi);
             db.SaveChanges();
         }
 
@@ -126,7 +123,7 @@ namespace DoAn_CuoiKy
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string filter = string.Format("{0} like '{1}'", "Name", "*" + txtTenHS.Text + "*");
-            (dataGridViewHS.DataSource as ______).DefaultView.RowFilter = filter;
+            //(dataGridViewHS.DataSource as ______).DefaultView.RowFilter = filter;
         }
     }
 }
