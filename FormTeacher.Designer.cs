@@ -275,6 +275,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormTeacher";
             this.Text = "FormTeacher";
+            this.Load += new System.EventHandler(this.FormTeacher_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKQ)).EndInit();
             this.panel2.ResumeLayout(false);
