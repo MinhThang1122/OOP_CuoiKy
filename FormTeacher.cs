@@ -10,15 +10,18 @@ using System.Windows.Forms;
 
 namespace DoAn_CuoiKy
 {
-	public partial class FormTeacher : Form
-	{
-		public FormTeacher()
-		{
-			InitializeComponent();
-		}
+    public partial class FormTeacher : Form
+    {
+        public FormTeacher()
+        {
+            InitializeComponent();
+        }
+
 
 
         CuoiKy_OOPEntities db = new CuoiKy_OOPEntities();
+
+
 
 
 
@@ -128,27 +131,33 @@ namespace DoAn_CuoiKy
             //(dataGridViewHS.DataSource as ______).DefaultView.RowFilter = filter;
         }
 
-		private void FormTeacher_Load_1(object sender, EventArgs e)
-		{
-			//lay ds loai sach
-			dsCauHoi = db.CauHois.ToList();
 
-			//hien thi len datagird
-			loadCauHoi(dsCauHoi);
-		}
+        private void FormTeacher_Load_1(object sender, EventArgs e)
+        {
+            //lay ds loai sach
+            dsCauHoi = db.CauHois.ToList();
 
-		private void dtaGridViewKQ_CellClick(object sender, DataGridViewCellEventArgs e)
-		{
-			DataGridViewRow row = dataGridViewKQ.CurrentRow;
-			int index = row.Index;
-			if (index >= dsCauHoi.Count)
-				return;
-			//hien thi thong tin tren cac txt
-			cauHoi = dsCauHoi[index];
-			txtMaCauHoi.Text = cauHoi.MaCauHoi + "";
-			txtNoiDung.Text = cauHoi.NoiDungCauHoi;
-			txtMaChuong.Text = cauHoi.MaChuong;
-			txtMaDethi.Text = cauHoi.MaCauHoi;
-		}
-	}
+            //hien thi len datagird
+            loadCauHoi(dsCauHoi);
+        }
+
+        private void dtaGridViewKQ_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewKQ.CurrentRow;
+            int index = row.Index;
+            if (index >= dsCauHoi.Count)
+                return;
+            //hien thi thong tin tren cac txt
+            cauHoi = dsCauHoi[index];
+            txtMaCauHoi.Text = cauHoi.MaCauHoi + "";
+            txtNoiDung.Text = cauHoi.NoiDungCauHoi;
+            txtMaChuong.Text = cauHoi.MaChuong;
+            txtMaDethi.Text = cauHoi.MaCauHoi;
+        }
+
+
+      
+    }
 }
+
+
