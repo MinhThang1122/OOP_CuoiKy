@@ -44,6 +44,9 @@
             this.btnThi = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.gbProfile.SuspendLayout();
             this.gbLuyenThi.SuspendLayout();
             this.SuspendLayout();
@@ -53,10 +56,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(763, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(763, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            
             // 
             // contextMenuStrip1
             // 
@@ -66,6 +68,9 @@
             // 
             // gbProfile
             // 
+            this.gbProfile.Controls.Add(this.textBox3);
+            this.gbProfile.Controls.Add(this.textBox2);
+            this.gbProfile.Controls.Add(this.textBox1);
             this.gbProfile.Controls.Add(this.btnluu);
             this.gbProfile.Controls.Add(this.btnSuaProfile);
             this.gbProfile.Controls.Add(this.lboxMonHoc);
@@ -143,7 +148,7 @@
             // 
             this.lblHoTen.AutoSize = true;
             this.lblHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoTen.Location = new System.Drawing.Point(25, 156);
+            this.lblHoTen.Location = new System.Drawing.Point(27, 164);
             this.lblHoTen.Name = "lblHoTen";
             this.lblHoTen.Size = new System.Drawing.Size(49, 16);
             this.lblHoTen.TabIndex = 5;
@@ -153,7 +158,7 @@
             // 
             this.lblMaHV.AutoSize = true;
             this.lblMaHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaHV.Location = new System.Drawing.Point(25, 120);
+            this.lblMaHV.Location = new System.Drawing.Point(25, 137);
             this.lblMaHV.Name = "lblMaHV";
             this.lblMaHV.Size = new System.Drawing.Size(82, 16);
             this.lblMaHV.TabIndex = 4;
@@ -200,6 +205,30 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Môn thi:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(113, 133);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(113, 160);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(98, 20);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(113, 189);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(98, 20);
+            this.textBox3.TabIndex = 11;
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,5 +267,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnThi;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
