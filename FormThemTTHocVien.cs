@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThemTTHocVien : Form
 	{
-		CuoiKy_OOPEntities db = new CuoiKy_OOPEntities();
+		CuoiKy_OOPEntities1 db = new CuoiKy_OOPEntities1();
 		List<C_User> dsUser = new List<C_User>();
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();
@@ -94,6 +94,8 @@ namespace DoAn_CuoiKy
 			//them vao csdl
 			db.HocViens.Add(hocVien);
 			db.SaveChanges();
+
+			MessageBox.Show("Them Thanh Cong");
 		}
 		private void dtaGridViewTTHocVien_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -126,6 +128,33 @@ namespace DoAn_CuoiKy
 			db.SaveChanges();
 		}
 
+		private void btnSuaThongTinHV_Click(object sender, EventArgs e)
+		{
+			if (hocVien == null) return;
+			string hoTen = txtHoTenHV.Text;
+			string diaChi = txtDiaChiHV.Text;
+			string maUser = txtMaUserThamChieu.Text;
 
+			/*List<C_User> x = dsUser.Where(a => a.MaUser == maUser).ToList();
+
+			if (x.Count != null)
+			{
+				MessageBox.Show("Ma user da co vui long chon ten khac");
+				return;
+			}*/
+
+			hocVien.HoTen = txtHoTenHV.Text;
+			hocVien.DiaChi = txtDiaChiHV.Text;
+			hocVien.MaUser = txtMaUserThamChieu.Text;
+
+			db.SaveChanges();
+
+			//cap nhat len luoi
+			int index = dtaGridViewTTHocVien.CurrentRow.Index;
+			dtaGridViewTTHocVien.Rows[index].Cells[1].Value = hoTen;
+			dtaGridViewTTHocVien.Rows[index].Cells[2].Value = diaChi;
+			dtaGridViewTTHocVien.Rows[index].Cells[3].Value = maUser;
+			MessageBox.Show("Sua thanh cong");
+		}
 	}
 }

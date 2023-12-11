@@ -120,6 +120,7 @@
 			this.btnSuaThongTinHV.TabIndex = 6;
 			this.btnSuaThongTinHV.Text = "Sua";
 			this.btnSuaThongTinHV.UseVisualStyleBackColor = true;
+			this.btnSuaThongTinHV.Click += new System.EventHandler(this.btnSuaThongTinHV_Click);
 			// 
 			// btnThemHV
 			// 

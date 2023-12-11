@@ -20,7 +20,7 @@ namespace DoAn_CuoiKy
 
 		private void btnDangNhap_Click(object sender, EventArgs e)
 		{
-			SqlConnection loginCon = new SqlConnection("Data Source=ASUSGHE;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
+			SqlConnection loginCon = new SqlConnection("Data Source=LAPTOP-7H1PG1MJ\\MSSQLSERVER01;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
 			SqlCommand cmd = new SqlCommand("select * from _User where TenDN = '"+txtTaiKhoan.Text+"' and MK = '"+txtMatKhau.Text+"'",loginCon);
 			SqlDataAdapter sda = new SqlDataAdapter(cmd);
 			DataTable dt = new DataTable();

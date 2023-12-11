@@ -133,6 +133,7 @@
 			this.btnSuaTTGV.TabIndex = 6;
 			this.btnSuaTTGV.Text = "Sua";
 			this.btnSuaTTGV.UseVisualStyleBackColor = true;
+			this.btnSuaTTGV.Click += new System.EventHandler(this.btnSuaTTGV_Click);
 			// 
 			// btnThemGV
 			// 

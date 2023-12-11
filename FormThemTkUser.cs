@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThemTkUser : Form
 	{
-		CuoiKy_OOPEntities db = new CuoiKy_OOPEntities();
+		CuoiKy_OOPEntities1 db = new CuoiKy_OOPEntities1();
 		List<C_User> dsUser = new List<C_User>();
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();
@@ -128,6 +128,36 @@ namespace DoAn_CuoiKy
 			txtMatKhau.Text = User.MK;
 			txtRoles.Text = User.UserRoles;
 
+		}
+
+		private void btnSuaTaiKhoan_Click(object sender, EventArgs e)
+		{
+			if (User == null) return;
+			string maUser = txtMaUser.Text;
+			string tenDN = txtTenDN.Text;
+			string MK = txtMatKhau.Text;
+			string Roles = txtRoles.Text;
+
+			/*List<C_User> x = dsUser.Where(a => a.MaUser == maUser).ToList();
+
+			if (x.Count != null)
+			{
+				MessageBox.Show("Ma user da co vui long chon ten khac");
+				return;
+			}*/
+
+			User.TenDN = txtTenDN.Text;
+			User.MK = txtMatKhau.Text;
+			User.UserRoles = txtRoles.Text;
+
+			db.SaveChanges();
+
+			//cap nhat len luoi
+			int index = dtaGridViewAdmin.CurrentRow.Index;
+			dtaGridViewAdmin.Rows[index].Cells[1].Value = Roles;
+			dtaGridViewAdmin.Rows[index].Cells[2].Value = tenDN;
+			dtaGridViewAdmin.Rows[index].Cells[3].Value = MK;
+			MessageBox.Show("Sua thanh cong");
 		}
 	}
 }

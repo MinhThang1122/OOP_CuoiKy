@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThemTTGiaoVien : Form
 	{
-		CuoiKy_OOPEntities db = new CuoiKy_OOPEntities();
+		CuoiKy_OOPEntities1 db = new CuoiKy_OOPEntities1();
 		List<C_User> dsUser = new List<C_User>();
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();
@@ -125,6 +125,38 @@ namespace DoAn_CuoiKy
 			//them vao csdl
 			db.GiaoViens.Add(giaoVien);
 			db.SaveChanges();
+
+			MessageBox.Show("Them Thanh Cong");
+		}
+
+		private void btnSuaTTGV_Click(object sender, EventArgs e)
+		{
+			if (giaoVien == null) return;
+
+			string tenGV = txtHoTenGiaoVien.Text;
+			string diaChi = txtDiaChiGV.Text;
+			string maUser = txtMaUserGV.Text;
+
+			/*List<C_User> x = dsUser.Where(a => a.MaUser == maUser).ToList();
+
+			if (x.Count != null)
+			{
+				MessageBox.Show("Ma user da co vui long chon ten khac");
+				return;
+			}*/
+
+			giaoVien.HoTen = txtHoTenGiaoVien.Text;
+			giaoVien.DiaChi = txtDiaChiGV.Text;
+			giaoVien.MaUser = txtMaUserGV.Text;
+
+			db.SaveChanges();
+
+			//cap nhat len luoi
+			int index = dtaGridViewTTTeacher.CurrentRow.Index;
+			dtaGridViewTTTeacher.Rows[index].Cells[1].Value = tenGV;
+			dtaGridViewTTTeacher.Rows[index].Cells[2].Value = diaChi;
+			dtaGridViewTTTeacher.Rows[index].Cells[3].Value = maUser;
+			MessageBox.Show("Sua thanh cong");
 		}
 	}
 }

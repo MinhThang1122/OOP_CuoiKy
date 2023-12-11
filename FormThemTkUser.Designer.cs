@@ -104,6 +104,7 @@
 			this.btnSuaTaiKhoan.TabIndex = 6;
 			this.btnSuaTaiKhoan.Text = "Sua";
 			this.btnSuaTaiKhoan.UseVisualStyleBackColor = true;
+			this.btnSuaTaiKhoan.Click += new System.EventHandler(this.btnSuaTaiKhoan_Click);
 			// 
 			// btnThemTaiKhoan
 			// 

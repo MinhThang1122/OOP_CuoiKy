@@ -133,6 +133,18 @@
     <Compile Include="FormThi.Designer.cs">
       <DependentUpon>FormThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTinStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinStudent.Designer.cs">
+      <DependentUpon>FormThongTinStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraCuuKQStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraCuuKQStudent.Designer.cs">
+      <DependentUpon>FormTraCuuKQStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoVien.cs">
       <DependentUpon>CuoiKy_OOP.tt</DependentUpon>
     </Compile>
@@ -147,9 +159,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>CuoiKy_OOP.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThi.resx">
       <DependentUpon>FormThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinStudent.resx">
+      <DependentUpon>FormThongTinStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraCuuKQStudent.resx">
+      <DependentUpon>FormTraCuuKQStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
