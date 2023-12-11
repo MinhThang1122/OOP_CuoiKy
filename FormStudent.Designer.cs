@@ -29,9 +29,11 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.gbProfile = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnluu = new System.Windows.Forms.Button();
             this.btnSuaProfile = new System.Windows.Forms.Button();
             this.lboxMonHoc = new System.Windows.Forms.ListBox();
@@ -44,21 +46,15 @@
             this.btnThi = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.studentInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbProfile.SuspendLayout();
             this.gbLuyenThi.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(763, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // contextMenuStrip1
             // 
@@ -80,12 +76,36 @@
             this.gbProfile.Controls.Add(this.lblHoTen);
             this.gbProfile.Controls.Add(this.lblMaHV);
             this.gbProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProfile.Location = new System.Drawing.Point(408, 27);
+            this.gbProfile.Location = new System.Drawing.Point(504, 28);
             this.gbProfile.Name = "gbProfile";
             this.gbProfile.Size = new System.Drawing.Size(343, 373);
             this.gbProfile.TabIndex = 3;
             this.gbProfile.TabStop = false;
             this.gbProfile.Text = "Thông tin cá nhân";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(113, 189);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(98, 20);
+            this.textBox3.TabIndex = 11;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(113, 160);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(98, 20);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(113, 133);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 9;
             // 
             // btnluu
             // 
@@ -170,7 +190,7 @@
             this.gbLuyenThi.Controls.Add(this.comboBox1);
             this.gbLuyenThi.Controls.Add(this.label1);
             this.gbLuyenThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbLuyenThi.Location = new System.Drawing.Point(38, 27);
+            this.gbLuyenThi.Location = new System.Drawing.Point(91, 28);
             this.gbLuyenThi.Name = "gbLuyenThi";
             this.gbLuyenThi.Size = new System.Drawing.Size(328, 153);
             this.gbLuyenThi.TabIndex = 4;
@@ -205,39 +225,46 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Môn thi:";
             // 
-            // textBox1
+            // menuStrip2
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 133);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 20);
-            this.textBox1.TabIndex = 9;
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentInformationToolStripMenuItem,
+            this.thiToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1490, 28);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // textBox2
+            // studentInformationToolStripMenuItem
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 160);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(98, 20);
-            this.textBox2.TabIndex = 10;
+            this.studentInformationToolStripMenuItem.Name = "studentInformationToolStripMenuItem";
+            this.studentInformationToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+            this.studentInformationToolStripMenuItem.Text = "Student Information";
             // 
-            // textBox3
+            // thiToolStripMenuItem
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 189);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(98, 20);
-            this.textBox3.TabIndex = 11;
+            this.thiToolStripMenuItem.Name = "thiToolStripMenuItem";
+            this.thiToolStripMenuItem.Size = new System.Drawing.Size(43, 24);
+            this.thiToolStripMenuItem.Text = "Thi";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.gbLuyenThi);
+            this.panel1.Controls.Add(this.gbProfile);
+            this.panel1.Location = new System.Drawing.Point(12, 31);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(880, 453);
+            this.panel1.TabIndex = 6;
             // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 422);
-            this.Controls.Add(this.gbLuyenThi);
-            this.Controls.Add(this.gbProfile);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(1490, 520);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip2);
             this.Name = "FormStudent";
             this.Text = "FormStudent";
             this.Load += new System.EventHandler(this.FormStudent_Load);
@@ -245,14 +272,15 @@
             this.gbProfile.PerformLayout();
             this.gbLuyenThi.ResumeLayout(false);
             this.gbLuyenThi.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox gbProfile;
         private System.Windows.Forms.Label lblHoTen;
@@ -270,5 +298,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem studentInformationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thiToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
