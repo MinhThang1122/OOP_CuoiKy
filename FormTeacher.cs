@@ -17,19 +17,11 @@ namespace DoAn_CuoiKy
             InitializeComponent();
         }
 
-
-
         CuoiKy_OOPEntities1 db = new CuoiKy_OOPEntities1();
-
-
-
-
-
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         C_User User = null;
         CauHoi cauHoi = null;
-
 
         private void FormTeacher_Load(object sender, EventArgs e)
         {
