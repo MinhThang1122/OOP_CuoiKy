@@ -12,13 +12,15 @@ namespace DoAn_CuoiKy
     using System;
     using System.Collections.Generic;
     
-    public partial class DapAn
+    public partial class BaiLam
     {
-        public string MaDA { get; set; }
-        public Nullable<bool> DungSai { get; set; }
-        public string NoiDungDapAn { get; set; }
-        public string MaCauHoi { get; set; }
+        public string MaBaiLam { get; set; }
+        public string MaHocVien { get; set; }
+        public string MaDeThi { get; set; }
+        public Nullable<float> Diem { get; set; }
+        public Nullable<System.DateTime> ThoiGianNop { get; set; }
     
-        public virtual CauHoi CauHoi { get; set; }
+        public virtual DeThi DeThi { get; set; }
+        public virtual HocVien HocVien { get; set; }
     }
 }

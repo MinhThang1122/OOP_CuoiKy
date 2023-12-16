@@ -14,6 +14,12 @@ namespace DoAn_CuoiKy
     
     public partial class HocVien
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HocVien()
+        {
+            this.BaiLams = new HashSet<BaiLam>();
+        }
+    
         public string MaHocVien { get; set; }
         public string HoTen { get; set; }
         public string DiaChi { get; set; }
@@ -22,6 +28,8 @@ namespace DoAn_CuoiKy
         public string MaUser { get; set; }
     
         public virtual C_User C_User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BaiLam> BaiLams { get; set; }
         public virtual LopHoc LopHoc { get; set; }
     }
 }

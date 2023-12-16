@@ -14,19 +14,11 @@ namespace DoAn_CuoiKy
     
     public partial class GiaoVien
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public GiaoVien()
-        {
-            this.DeThis = new HashSet<DeThi>();
-        }
-    
         public string MaGiaoVien { get; set; }
         public string HoTen { get; set; }
         public string DiaChi { get; set; }
         public string MaUser { get; set; }
     
         public virtual C_User C_User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DeThi> DeThis { get; set; }
     }
 }

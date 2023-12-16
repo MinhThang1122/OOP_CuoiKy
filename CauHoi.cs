@@ -14,20 +14,11 @@ namespace DoAn_CuoiKy
     
     public partial class CauHoi
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CauHoi()
-        {
-            this.DapAns = new HashSet<DapAn>();
-        }
-    
         public string MaCauHoi { get; set; }
-        public string NoiDungCauHoi { get; set; }
+        public string DapAn { get; set; }
+        public byte[] HinhAnhCauHoi { get; set; }
         public string MaChuong { get; set; }
-        public string MaDeThi { get; set; }
     
         public virtual Chuong Chuong { get; set; }
-        public virtual DeThi DeThi { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DapAn> DapAns { get; set; }
     }
 }

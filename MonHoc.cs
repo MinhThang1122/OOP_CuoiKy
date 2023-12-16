@@ -18,6 +18,7 @@ namespace DoAn_CuoiKy
         public MonHoc()
         {
             this.Chuongs = new HashSet<Chuong>();
+            this.DeThis = new HashSet<DeThi>();
         }
     
         public string MaMonHoc { get; set; }
@@ -25,5 +26,7 @@ namespace DoAn_CuoiKy
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chuong> Chuongs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DeThi> DeThis { get; set; }
     }
 }

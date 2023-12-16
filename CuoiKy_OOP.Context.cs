@@ -13,10 +13,10 @@ namespace DoAn_CuoiKy
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CuoiKy_OOPEntities2 : DbContext
+    public partial class CuoiKy_OOPEntities3 : DbContext
     {
-        public CuoiKy_OOPEntities2()
-            : base("name=CuoiKy_OOPEntities2")
+        public CuoiKy_OOPEntities3()
+            : base("name=CuoiKy_OOPEntities3")
         {
         }
     
@@ -26,9 +26,9 @@ namespace DoAn_CuoiKy
         }
     
         public virtual DbSet<C_User> C_User { get; set; }
+        public virtual DbSet<BaiLam> BaiLams { get; set; }
         public virtual DbSet<CauHoi> CauHois { get; set; }
         public virtual DbSet<Chuong> Chuongs { get; set; }
-        public virtual DbSet<DapAn> DapAns { get; set; }
         public virtual DbSet<DeThi> DeThis { get; set; }
         public virtual DbSet<GiaoVien> GiaoViens { get; set; }
         public virtual DbSet<HocVien> HocViens { get; set; }

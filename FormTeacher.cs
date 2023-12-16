@@ -19,7 +19,7 @@ namespace DoAn_CuoiKy
             InitializeComponent();
         }
 
-        CuoiKy_OOPEntities2 db = new CuoiKy_OOPEntities2();
+        CuoiKy_OOPEntities3 db = new CuoiKy_OOPEntities3();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         C_User User = null;
@@ -33,7 +33,7 @@ namespace DoAn_CuoiKy
 		{
 			dataGridViewKQ.Columns.Add("MaCauHoi", "Ma Cau Hoi");
 			dataGridViewKQ.Columns.Add("MaChuong", "Ma Chuong");
-			dataGridViewKQ.Columns.Add("MaDeThi", "Ma De Thi");
+			dataGridViewKQ.Columns.Add("MaMonHoc", "Ma Mon Hoc");
 			dataGridViewKQ.Columns.Add("NoiDung", "Noi Dung");
 			foreach (CauHoi CH in x)
 			{
@@ -41,9 +41,9 @@ namespace DoAn_CuoiKy
 				row.CreateCells(dataGridViewKQ);
 				row.Cells[0].Value = CH.MaCauHoi + "";
 				row.Cells[1].Value = CH.MaChuong + "";
-				row.Cells[2].Value = CH.MaDeThi + "";
+				
 				dataGridViewKQ.Columns[3].Width = 150;
-				row.Cells[3].Value = CH.NoiDungCauHoi;
+				row.Cells[3].Value = CH.HinhAnhCauHoi;
 				dataGridViewKQ.Rows.Add(row);
 			}
 		}
@@ -70,7 +70,7 @@ namespace DoAn_CuoiKy
 			
 			string macauhoi = txtMaCauHoi.Text;
 			string machuong = txtMaChuong.Text;
-			string madethi = txtMaDethi.Text;
+			string madethi = txtMaMon.Text;
 			
 
 			List<CauHoi> cauhoi = dsCauHoi.Where(t => t.MaCauHoi == macauhoi).ToList();
@@ -84,7 +84,7 @@ namespace DoAn_CuoiKy
 			cauHoi = new CauHoi();
 			cauHoi.MaCauHoi = macauhoi;
 			cauHoi.MaChuong = machuong;
-			cauHoi.MaDeThi = madethi;
+			
 			
 
 			MessageBox.Show("Them cau hoi thanh cong");
@@ -151,7 +151,7 @@ namespace DoAn_CuoiKy
 			txtMaCauHoi.Text = cauHoi.MaCauHoi + "";
 			
 			txtMaChuong.Text = cauHoi.MaChuong;
-			txtMaDethi.Text = cauHoi.MaCauHoi;
+			txtMaMon.Text = cauHoi.MaCauHoi;
 		}
 
 
@@ -179,7 +179,9 @@ namespace DoAn_CuoiKy
 		{
 			
 		}
-	}
+
+
+    }
 }
 
 

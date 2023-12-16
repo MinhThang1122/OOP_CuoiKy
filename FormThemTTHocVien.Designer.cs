@@ -40,7 +40,6 @@
             this.lblTenLoai = new System.Windows.Forms.Label();
             this.btnXoaTTHocVien = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.dtaGridViewTTHocVien = new System.Windows.Forms.DataGridView();
             this.picBoxHocVien = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtaGridViewTTHocVien)).BeginInit();
@@ -178,19 +177,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "DANH SÁCH THÔNG TIN HỌC VIÊN";
             // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnLogout.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(932, 33);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 43);
-            this.btnLogout.TabIndex = 19;
-            this.btnLogout.Text = "Thoát";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // dtaGridViewTTHocVien
             // 
             this.dtaGridViewTTHocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -220,7 +206,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1137, 763);
             this.Controls.Add(this.picBoxHocVien);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMaUserThamChieu);
             this.Controls.Add(this.btnSuaThongTinHV);
@@ -257,7 +242,6 @@
 		private System.Windows.Forms.Label lblTenLoai;
 		private System.Windows.Forms.Button btnXoaTTHocVien;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.DataGridView dtaGridViewTTHocVien;
         private System.Windows.Forms.PictureBox picBoxHocVien;
     }

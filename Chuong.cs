@@ -21,6 +21,7 @@ namespace DoAn_CuoiKy
         }
     
         public string MaChuong { get; set; }
+        public string TenChuong { get; set; }
         public string MaMonHoc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

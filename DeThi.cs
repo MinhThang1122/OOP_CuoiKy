@@ -17,16 +17,15 @@ namespace DoAn_CuoiKy
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DeThi()
         {
-            this.CauHois = new HashSet<CauHoi>();
+            this.BaiLams = new HashSet<BaiLam>();
         }
     
         public string MaDeThi { get; set; }
         public Nullable<System.DateTime> NgayThi { get; set; }
-        public string NoiDungCauHoi { get; set; }
-        public string MaGiaoVien { get; set; }
+        public string MaMonHoc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CauHoi> CauHois { get; set; }
-        public virtual GiaoVien GiaoVien { get; set; }
+        public virtual ICollection<BaiLam> BaiLams { get; set; }
+        public virtual MonHoc MonHoc { get; set; }
     }
 }
