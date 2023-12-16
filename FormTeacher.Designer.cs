@@ -175,6 +175,7 @@
             // 
             // picboxNDcauHoi
             // 
+            this.picboxNDcauHoi.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.picboxNDcauHoi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picboxNDcauHoi.Location = new System.Drawing.Point(124, 83);
             this.picboxNDcauHoi.Name = "picboxNDcauHoi";
