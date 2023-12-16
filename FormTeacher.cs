@@ -67,11 +67,11 @@ namespace DoAn_CuoiKy
 		private void btnThemCH_Click(object sender, EventArgs e)
 		{
 			if (string.IsNullOrEmpty(txtMaCauHoi.Text) || string.IsNullOrWhiteSpace(txtMaCauHoi.Text)) return;
-			if (string.IsNullOrEmpty(txtNoiDung.Text) || string.IsNullOrWhiteSpace(txtNoiDung.Text)) return;
+			
 			string macauhoi = txtMaCauHoi.Text;
 			string machuong = txtMaChuong.Text;
 			string madethi = txtMaDethi.Text;
-			string noidung = txtNoiDung.Text;
+			
 
 			List<CauHoi> cauhoi = dsCauHoi.Where(t => t.MaCauHoi == macauhoi).ToList();
 
@@ -85,7 +85,7 @@ namespace DoAn_CuoiKy
 			cauHoi.MaCauHoi = macauhoi;
 			cauHoi.MaChuong = machuong;
 			cauHoi.MaDeThi = madethi;
-			cauHoi.NoiDungCauHoi = noidung;
+			
 
 			MessageBox.Show("Them cau hoi thanh cong");
 
@@ -96,7 +96,7 @@ namespace DoAn_CuoiKy
 			row.Cells[0].Value = macauhoi;
 			row.Cells[1].Value = machuong;
 			row.Cells[2].Value = madethi;
-			row.Cells[3].Value = noidung;
+			
 			dataGridViewKQ.Rows.Add(row);
 
 			db.CauHois.Add(cauHoi);
@@ -149,28 +149,30 @@ namespace DoAn_CuoiKy
 			//hien thi thong tin tren cac txt
 			cauHoi = dsCauHoi[index];
 			txtMaCauHoi.Text = cauHoi.MaCauHoi + "";
-			txtNoiDung.Text = cauHoi.NoiDungCauHoi;
+			
 			txtMaChuong.Text = cauHoi.MaChuong;
 			txtMaDethi.Text = cauHoi.MaCauHoi;
 		}
 
-		private void btnLogout_Click(object sender, EventArgs e)
-		{
-			Form1 f = new Form1();
-			f.Show();
-			this.Hide();
-		}
 
 		Image file;
-        private void picboxNDcauHoi_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog f = new OpenFileDialog();
-            f.Filter = "JPG (*.JPG)|*.jpg";
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                file = Image.FromFile(f.FileName);
+		private void picboxNDcauHoi_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog f = new OpenFileDialog();
+			f.Filter = "JPG (*.JPG)|*.jpg";
+			if (f.ShowDialog() == DialogResult.OK)
+			{
+				file = Image.FromFile(f.FileName);
 				picboxNDcauHoi.Image = file;
-            }
+			}
+		}
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Close();
+        }
     }
 }
 

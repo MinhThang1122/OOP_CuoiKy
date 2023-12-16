@@ -38,8 +38,15 @@
             this.lblTenHS = new System.Windows.Forms.Label();
             this.lblMaHS = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picboxNDcauHoi = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtDapAnDung = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnThemCH = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.txtMaDethi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaChuong = new System.Windows.Forms.TextBox();
@@ -47,21 +54,16 @@
             this.txtMaCauHoi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnThemCH = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.picboxNDcauHoi = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKQ)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picboxNDcauHoi)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewHS
@@ -175,6 +177,23 @@
             this.panel1.Size = new System.Drawing.Size(504, 311);
             this.panel1.TabIndex = 14;
             // 
+            // picboxNDcauHoi
+            // 
+            this.picboxNDcauHoi.Location = new System.Drawing.Point(124, 83);
+            this.picboxNDcauHoi.Name = "picboxNDcauHoi";
+            this.picboxNDcauHoi.Size = new System.Drawing.Size(345, 117);
+            this.picboxNDcauHoi.TabIndex = 12;
+            this.picboxNDcauHoi.TabStop = false;
+            this.picboxNDcauHoi.Click += new System.EventHandler(this.picboxNDcauHoi_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(124, 206);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(112, 24);
+            this.comboBox1.TabIndex = 20;
+            // 
             // txtDapAnDung
             // 
             this.txtDapAnDung.Location = new System.Drawing.Point(357, 27);
@@ -182,6 +201,17 @@
             this.txtDapAnDung.Name = "txtDapAnDung";
             this.txtDapAnDung.Size = new System.Drawing.Size(112, 19);
             this.txtDapAnDung.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label5.Location = new System.Drawing.Point(28, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Câu Trả Lời";
             // 
             // label1
             // 
@@ -193,6 +223,52 @@
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Đáp Án Đúng";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnThemCH);
+            this.panel3.Controls.Add(this.btnSua);
+            this.panel3.Controls.Add(this.btnXoa);
+            this.panel3.Location = new System.Drawing.Point(31, 244);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(438, 53);
+            this.panel3.TabIndex = 18;
+            // 
+            // btnThemCH
+            // 
+            this.btnThemCH.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnThemCH.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCH.ForeColor = System.Drawing.Color.White;
+            this.btnThemCH.Location = new System.Drawing.Point(21, 7);
+            this.btnThemCH.Name = "btnThemCH";
+            this.btnThemCH.Size = new System.Drawing.Size(75, 37);
+            this.btnThemCH.TabIndex = 7;
+            this.btnThemCH.Text = "Thêm";
+            this.btnThemCH.UseVisualStyleBackColor = false;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnSua.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(348, 7);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 37);
+            this.btnSua.TabIndex = 9;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(193, 7);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 37);
+            this.btnXoa.TabIndex = 8;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // txtMaDethi
             // 
@@ -262,103 +338,38 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Mã Chương";
             // 
-            // btnLogout
+            // menuStrip1
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnLogout.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(1209, 43);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 37);
-            this.btnLogout.TabIndex = 10;
-            this.btnLogout.Text = "Thoát";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dangXuatToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1405, 28);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // comboBox1
+            // dangXuatToolStripMenuItem
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 206);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(112, 24);
-            this.comboBox1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label5.Location = new System.Drawing.Point(28, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Câu Trả Lời";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnThemCH);
-            this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnXoa);
-            this.panel3.Location = new System.Drawing.Point(31, 244);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 53);
-            this.panel3.TabIndex = 18;
-            // 
-            // btnThemCH
-            // 
-            this.btnThemCH.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnThemCH.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemCH.ForeColor = System.Drawing.Color.White;
-            this.btnThemCH.Location = new System.Drawing.Point(21, 7);
-            this.btnThemCH.Name = "btnThemCH";
-            this.btnThemCH.Size = new System.Drawing.Size(75, 37);
-            this.btnThemCH.TabIndex = 7;
-            this.btnThemCH.Text = "Thêm";
-            this.btnThemCH.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnSua.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(348, 7);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 37);
-            this.btnSua.TabIndex = 9;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnXoa.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(193, 7);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 37);
-            this.btnXoa.TabIndex = 8;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // picboxNDcauHoi
-            // 
-            this.picboxNDcauHoi.Location = new System.Drawing.Point(124, 83);
-            this.picboxNDcauHoi.Name = "picboxNDcauHoi";
-            this.picboxNDcauHoi.Size = new System.Drawing.Size(345, 117);
-            this.picboxNDcauHoi.TabIndex = 12;
-            this.picboxNDcauHoi.TabStop = false;
-            this.picboxNDcauHoi.Click += new System.EventHandler(this.picboxNDcauHoi_Click);
+            this.dangXuatToolStripMenuItem.BackColor = System.Drawing.Color.DarkViolet;
+            this.dangXuatToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dangXuatToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
+            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.dangXuatToolStripMenuItem.Text = "Đăng Xuất";
+            this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
             // 
             // FormTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1405, 748);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.dataGridViewHS);
             this.Controls.Add(this.dataGridViewKQ);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormTeacher";
             this.Text = "FormTeacher";
             this.Load += new System.EventHandler(this.FormTeacher_Load_1);
@@ -369,9 +380,12 @@
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picboxNDcauHoi)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -394,7 +408,6 @@
         private System.Windows.Forms.TextBox txtMaCauHoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button btnLogout;
 		private System.Windows.Forms.TextBox txtDapAnDung;
 		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picboxNDcauHoi;
@@ -404,5 +417,7 @@
         private System.Windows.Forms.Button btnThemCH;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dangXuatToolStripMenuItem;
     }
 }
