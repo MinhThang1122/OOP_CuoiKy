@@ -158,5 +158,12 @@ namespace DoAn_CuoiKy
 			dtaGridViewTTTeacher.Rows[index].Cells[3].Value = maUser;
 			MessageBox.Show("Sua thanh cong");
 		}
+
+		private void btnLogout_Click(object sender, EventArgs e)
+		{
+			Form1 form = new Form1();
+			form.Show();
+			this.Close();
+		}
 	}
 }

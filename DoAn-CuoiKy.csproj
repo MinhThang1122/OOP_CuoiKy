@@ -197,6 +197,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="CuoiKy_OOP.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -233,6 +234,8 @@
       <DependentUpon>CuoiKy_OOP.edmx</DependentUpon>
       <LastGenOutput>CuoiKy_OOP.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\plain-purple-background-hefxwfzmmbp8leis.jpg" />
+    <None Include="Resources\Screenshot 2023-12-13 224320.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

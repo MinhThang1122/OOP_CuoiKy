@@ -22,5 +22,12 @@ namespace DoAn_CuoiKy
 			FormThi f = new FormThi();
 			f.ShowDialog();
 		}
+
+		private void btnLogout_Click(object sender, EventArgs e)
+		{
+			Form1 form = new Form1();
+			form.Show();
+			this.Hide();
+		}
 	}
 }

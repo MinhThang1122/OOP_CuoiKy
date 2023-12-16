@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -120,8 +122,13 @@ namespace DoAn_CuoiKy
 
 		private void btnTimKiem_Click(object sender, EventArgs e)
 		{
-			string filter = string.Format("{0} like '{1}'", "Name", "*" + txtTenHS.Text + "*");
-			//(dataGridViewHS.DataSource as ______).DefaultView.RowFilter = filter;
+			SqlDataAdapter da;
+			SqlConnection conn = new SqlConnection("Data Source=LAPTOP-7H1PG1MJ\\MSSQLSERVER01;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
+			da = new SqlDataAdapter("Select * From HocVien where MaHocVien = " + txtMaHS.Text, conn);
+			DataTable dt = new DataTable();
+			da.Fill(dt);
+			da.Dispose();
+			dataGridViewHS.DataSource = dt;
 		}
 
 		private void FormTeacher_Load_1(object sender, EventArgs e)
@@ -147,8 +154,12 @@ namespace DoAn_CuoiKy
 			txtMaDethi.Text = cauHoi.MaCauHoi;
 		}
 
-
-
+		private void btnLogout_Click(object sender, EventArgs e)
+		{
+			Form1 f = new Form1();
+			f.Show();
+			this.Hide();
+		}
 	}
 }
 

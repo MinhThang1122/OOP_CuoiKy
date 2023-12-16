@@ -51,30 +51,30 @@
             this.thiToolStripMenuItem});
 			this.menuStrip2.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip2.Name = "menuStrip2";
-			this.menuStrip2.Size = new System.Drawing.Size(1490, 28);
+			this.menuStrip2.Size = new System.Drawing.Size(1490, 30);
 			this.menuStrip2.TabIndex = 5;
 			this.menuStrip2.Text = "menuStrip2";
 			// 
 			// studentInformationToolStripMenuItem
 			// 
 			this.studentInformationToolStripMenuItem.Name = "studentInformationToolStripMenuItem";
-			this.studentInformationToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
+			this.studentInformationToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
 			this.studentInformationToolStripMenuItem.Text = "Student Information";
 			this.studentInformationToolStripMenuItem.Click += new System.EventHandler(this.studentInformationToolStripMenuItem_Click);
 			// 
 			// thiToolStripMenuItem
 			// 
 			this.thiToolStripMenuItem.Name = "thiToolStripMenuItem";
-			this.thiToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+			this.thiToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
 			this.thiToolStripMenuItem.Text = "Tra Cuu Ket Qua";
 			this.thiToolStripMenuItem.Click += new System.EventHandler(this.thiToolStripMenuItem_Click);
 			// 
 			// panel1
 			// 
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel1.Location = new System.Drawing.Point(0, 28);
+			this.panel1.Location = new System.Drawing.Point(0, 30);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1490, 643);
+			this.panel1.Size = new System.Drawing.Size(1490, 641);
 			this.panel1.TabIndex = 6;
 			// 
 			// FormStudent
