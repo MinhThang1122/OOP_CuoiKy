@@ -19,7 +19,7 @@ namespace DoAn_CuoiKy
             InitializeComponent();
         }
 
-        CuoiKy_OOPEntities1 db = new CuoiKy_OOPEntities1();
+        CuoiKy_OOPEntities2 db = new CuoiKy_OOPEntities2();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         C_User User = null;
@@ -162,10 +162,11 @@ namespace DoAn_CuoiKy
 			f.Filter = "JPG (*.JPG)|*.jpg";
 			if (f.ShowDialog() == DialogResult.OK)
 			{
-				file = Image.FromFile(f.FileName);
+                file = Image.FromFile(f.FileName);
 				picboxNDcauHoi.Image = file;
 			}
-		}
+            picboxNDcauHoi.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {

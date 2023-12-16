@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThemLop : Form
 	{
-		CuoiKy_OOPEntities1 db = new CuoiKy_OOPEntities1();
+		CuoiKy_OOPEntities2 db = new CuoiKy_OOPEntities2();
 		List<LopHoc> dsLop = new List<LopHoc>();
 		LopHoc lop = null;
 

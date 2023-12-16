@@ -40,9 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.picboxNDcauHoi = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtDapAnDung = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnThemCH = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -105,7 +103,7 @@
             this.panel4.Controls.Add(this.btnTimKiem);
             this.panel4.Location = new System.Drawing.Point(184, 103);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(115, 33);
+            this.panel4.Size = new System.Drawing.Size(115, 37);
             this.panel4.TabIndex = 12;
             // 
             // btnTimKiem
@@ -115,7 +113,7 @@
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Location = new System.Drawing.Point(18, 3);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiem.Size = new System.Drawing.Size(76, 27);
             this.btnTimKiem.TabIndex = 12;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -161,9 +159,7 @@
             // 
             this.panel1.Controls.Add(this.picboxNDcauHoi);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.txtDapAnDung);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtMaDethi);
             this.panel1.Controls.Add(this.label4);
@@ -194,14 +190,6 @@
             this.comboBox1.Size = new System.Drawing.Size(112, 24);
             this.comboBox1.TabIndex = 20;
             // 
-            // txtDapAnDung
-            // 
-            this.txtDapAnDung.Location = new System.Drawing.Point(357, 27);
-            this.txtDapAnDung.Multiline = true;
-            this.txtDapAnDung.Name = "txtDapAnDung";
-            this.txtDapAnDung.Size = new System.Drawing.Size(112, 19);
-            this.txtDapAnDung.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -212,17 +200,6 @@
             this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "Câu Trả Lời";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label1.Location = new System.Drawing.Point(259, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Đáp Án Đúng";
             // 
             // panel3
             // 
@@ -408,8 +385,6 @@
         private System.Windows.Forms.TextBox txtMaCauHoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.TextBox txtDapAnDung;
-		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picboxNDcauHoi;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
