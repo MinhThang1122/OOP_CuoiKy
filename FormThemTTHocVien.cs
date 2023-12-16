@@ -163,5 +163,19 @@ namespace DoAn_CuoiKy
 			form.Show();
 			this.Close();
 		}
-	}
+
+
+        Image file;
+        private void picBoxHocVien_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog f = new OpenFileDialog();
+            f.Filter = "JPG (*.JPG)|*.jpg";
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                file = Image.FromFile(f.FileName);
+                picBoxHocVien.Image = file;
+            }
+            picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+    }
 }

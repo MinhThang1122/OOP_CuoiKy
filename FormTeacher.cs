@@ -174,7 +174,12 @@ namespace DoAn_CuoiKy
             f.Show();
             this.Close();
         }
-    }
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+		}
+	}
 }
 
 
