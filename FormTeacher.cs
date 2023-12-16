@@ -169,7 +169,7 @@ namespace DoAn_CuoiKy
             if (f.ShowDialog() == DialogResult.OK)
             {
                 file = Image.FromFile(f.FileName);
-                picboxNDcauHoi.Image = file;
+				picboxNDcauHoi.Image = file;
             }
     }
 }

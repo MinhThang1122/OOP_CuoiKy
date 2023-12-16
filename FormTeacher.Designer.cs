@@ -226,7 +226,7 @@
             this.lblND.AutoSize = true;
             this.lblND.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblND.ForeColor = System.Drawing.Color.DarkViolet;
-            this.lblND.Location = new System.Drawing.Point(28, 83);
+            this.lblND.Location = new System.Drawing.Point(26, 83);
             this.lblND.Name = "lblND";
             this.lblND.Size = new System.Drawing.Size(67, 32);
             this.lblND.TabIndex = 0;
