@@ -160,7 +160,18 @@ namespace DoAn_CuoiKy
 			f.Show();
 			this.Hide();
 		}
-	}
+
+		Image file;
+        private void picboxNDcauHoi_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog f = new OpenFileDialog();
+            f.Filter = "JPG (*.JPG)|*.jpg";
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                file = Image.FromFile(f.FileName);
+                picboxNDcauHoi.Image = file;
+            }
+    }
 }
 
 
