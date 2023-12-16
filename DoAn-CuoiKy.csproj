@@ -109,6 +109,12 @@
     <Compile Include="FormTeacher.Designer.cs">
       <DependentUpon>FormTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemLop.Designer.cs">
+      <DependentUpon>FormThemLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemTkUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTeacher.resx">
       <DependentUpon>FormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemLop.resx">
+      <DependentUpon>FormThemLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemTkUser.resx">
       <DependentUpon>FormThemTkUser.cs</DependentUpon>

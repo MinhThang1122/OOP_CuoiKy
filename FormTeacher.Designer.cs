@@ -38,8 +38,6 @@
 			this.lblTenHS = new System.Windows.Forms.Label();
 			this.lblMaHS = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.txtDapAnDung = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.btnThemCH = new System.Windows.Forms.Button();
 			this.btnSua = new System.Windows.Forms.Button();
@@ -53,6 +51,8 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.btnLogout = new System.Windows.Forms.Button();
+			this.txtDapAnDung = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewHS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewKQ)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -169,25 +169,6 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(504, 311);
 			this.panel1.TabIndex = 14;
-			// 
-			// txtDapAnDung
-			// 
-			this.txtDapAnDung.Location = new System.Drawing.Point(357, 27);
-			this.txtDapAnDung.Multiline = true;
-			this.txtDapAnDung.Name = "txtDapAnDung";
-			this.txtDapAnDung.Size = new System.Drawing.Size(112, 19);
-			this.txtDapAnDung.TabIndex = 10;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.DarkViolet;
-			this.label1.Location = new System.Drawing.Point(259, 30);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(93, 16);
-			this.label1.TabIndex = 9;
-			this.label1.Text = "Đáp Án Đúng";
 			// 
 			// panel3
 			// 
@@ -326,6 +307,25 @@
 			this.btnLogout.UseVisualStyleBackColor = false;
 			this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
 			// 
+			// txtDapAnDung
+			// 
+			this.txtDapAnDung.Location = new System.Drawing.Point(357, 27);
+			this.txtDapAnDung.Multiline = true;
+			this.txtDapAnDung.Name = "txtDapAnDung";
+			this.txtDapAnDung.Size = new System.Drawing.Size(112, 19);
+			this.txtDapAnDung.TabIndex = 10;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.DarkViolet;
+			this.label1.Location = new System.Drawing.Point(259, 30);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(93, 16);
+			this.label1.TabIndex = 9;
+			this.label1.Text = "Đáp Án Đúng";
+			// 
 			// FormTeacher
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -375,8 +375,8 @@
         private System.Windows.Forms.TextBox txtMaCauHoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button btnLogout;
 		private System.Windows.Forms.TextBox txtDapAnDung;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button btnLogout;
 	}
 }

@@ -58,5 +58,11 @@ namespace DoAn_CuoiKy
 			FormThemTTGiaoVien f = new FormThemTTGiaoVien();
 			AddForm(f);
 		}
+
+		private void themLopHocToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormThemLop f = new FormThemLop();
+			AddForm(f);
+		}
 	}
 }

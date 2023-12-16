@@ -28,30 +28,22 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.txtMatKhau = new System.Windows.Forms.TextBox();
 			this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
 			this.btnSuaTaiKhoan = new System.Windows.Forms.Button();
 			this.btnThemTaiKhoan = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
 			this.txtMaUser = new System.Windows.Forms.TextBox();
-			this.txtRoles = new System.Windows.Forms.TextBox();
 			this.lbl10 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.txtTenDN = new System.Windows.Forms.TextBox();
 			this.lbl = new System.Windows.Forms.Label();
 			this.dtaGridViewAdmin = new System.Windows.Forms.DataGridView();
 			this.label3 = new System.Windows.Forms.Label();
 			this.btnLogout = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtRoles = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.txtMatKhau = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dtaGridViewAdmin)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// txtMatKhau
-			// 
-			this.txtMatKhau.Location = new System.Drawing.Point(665, 209);
-			this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
-			this.txtMatKhau.Name = "txtMatKhau";
-			this.txtMatKhau.Size = new System.Drawing.Size(210, 22);
-			this.txtMatKhau.TabIndex = 9;
 			// 
 			// btnXoaTaiKhoan
 			// 
@@ -95,18 +87,6 @@
 			this.btnThemTaiKhoan.UseVisualStyleBackColor = false;
 			this.btnThemTaiKhoan.Click += new System.EventHandler(this.btnThemTaiKhoan_Click);
 			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.DarkViolet;
-			this.label1.Location = new System.Drawing.Point(572, 254);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(75, 16);
-			this.label1.TabIndex = 8;
-			this.label1.Text = "User Roles";
-			// 
 			// txtMaUser
 			// 
 			this.txtMaUser.Location = new System.Drawing.Point(163, 202);
@@ -114,14 +94,6 @@
 			this.txtMaUser.Name = "txtMaUser";
 			this.txtMaUser.Size = new System.Drawing.Size(210, 22);
 			this.txtMaUser.TabIndex = 3;
-			// 
-			// txtRoles
-			// 
-			this.txtRoles.Location = new System.Drawing.Point(667, 254);
-			this.txtRoles.Margin = new System.Windows.Forms.Padding(4);
-			this.txtRoles.Name = "txtRoles";
-			this.txtRoles.Size = new System.Drawing.Size(210, 22);
-			this.txtRoles.TabIndex = 10;
 			// 
 			// lbl10
 			// 
@@ -134,18 +106,6 @@
 			this.lbl10.Size = new System.Drawing.Size(104, 16);
 			this.lbl10.TabIndex = 2;
 			this.lbl10.Text = "Tên Đăng Nhập";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.DarkViolet;
-			this.label2.Location = new System.Drawing.Point(572, 212);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(68, 16);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "Mật Khẩu";
 			// 
 			// txtTenDN
 			// 
@@ -201,6 +161,46 @@
 			this.btnLogout.UseVisualStyleBackColor = false;
 			this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.DarkViolet;
+			this.label2.Location = new System.Drawing.Point(572, 212);
+			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(68, 16);
+			this.label2.TabIndex = 7;
+			this.label2.Text = "Mật Khẩu";
+			// 
+			// txtRoles
+			// 
+			this.txtRoles.Location = new System.Drawing.Point(667, 254);
+			this.txtRoles.Margin = new System.Windows.Forms.Padding(4);
+			this.txtRoles.Name = "txtRoles";
+			this.txtRoles.Size = new System.Drawing.Size(210, 22);
+			this.txtRoles.TabIndex = 10;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.DarkViolet;
+			this.label1.Location = new System.Drawing.Point(572, 254);
+			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(75, 16);
+			this.label1.TabIndex = 8;
+			this.label1.Text = "User Roles";
+			// 
+			// txtMatKhau
+			// 
+			this.txtMatKhau.Location = new System.Drawing.Point(665, 209);
+			this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
+			this.txtMatKhau.Name = "txtMatKhau";
+			this.txtMatKhau.Size = new System.Drawing.Size(210, 22);
+			this.txtMatKhau.TabIndex = 9;
+			// 
 			// FormThemTkUser
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,19 +230,19 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.TextBox txtMatKhau;
 		private System.Windows.Forms.Button btnXoaTaiKhoan;
 		private System.Windows.Forms.Button btnSuaTaiKhoan;
 		private System.Windows.Forms.Button btnThemTaiKhoan;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtMaUser;
-		private System.Windows.Forms.TextBox txtRoles;
 		private System.Windows.Forms.Label lbl10;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtTenDN;
 		private System.Windows.Forms.Label lbl;
 		private System.Windows.Forms.DataGridView dtaGridViewAdmin;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnLogout;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox txtRoles;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox txtMatKhau;
 	}
 }

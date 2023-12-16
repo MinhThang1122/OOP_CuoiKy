@@ -25,7 +25,7 @@ namespace DoAn_CuoiKy
 
 		private void FormThemTkUser_Load(object sender, EventArgs e)
 		{
-			//lay ds loai sach
+			//lay ds user
 			dsUser = db.C_User.ToList();
 
 			//hien thi len datagird

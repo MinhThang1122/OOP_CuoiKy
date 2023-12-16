@@ -47,44 +47,45 @@
             this.themLopHocToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1386, 30);
+			this.menuStrip1.Size = new System.Drawing.Size(1386, 28);
 			this.menuStrip1.TabIndex = 11;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
 			// themTaiKhoanToolStripMenuItem
 			// 
 			this.themTaiKhoanToolStripMenuItem.Name = "themTaiKhoanToolStripMenuItem";
-			this.themTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+			this.themTaiKhoanToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
 			this.themTaiKhoanToolStripMenuItem.Text = "Them Tai Khoan";
 			this.themTaiKhoanToolStripMenuItem.Click += new System.EventHandler(this.themTaiKhoanToolStripMenuItem_Click);
 			// 
 			// themThongTinUserToolStripMenuItem
 			// 
 			this.themThongTinUserToolStripMenuItem.Name = "themThongTinUserToolStripMenuItem";
-			this.themThongTinUserToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+			this.themThongTinUserToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
 			this.themThongTinUserToolStripMenuItem.Text = "Them Thong Tin Hoc Vien";
 			this.themThongTinUserToolStripMenuItem.Click += new System.EventHandler(this.themThongTinUserToolStripMenuItem_Click);
 			// 
 			// themThongTinGiaoVienToolStripMenuItem
 			// 
 			this.themThongTinGiaoVienToolStripMenuItem.Name = "themThongTinGiaoVienToolStripMenuItem";
-			this.themThongTinGiaoVienToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+			this.themThongTinGiaoVienToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
 			this.themThongTinGiaoVienToolStripMenuItem.Text = "Them Thong Tin Giao Vien";
 			this.themThongTinGiaoVienToolStripMenuItem.Click += new System.EventHandler(this.themThongTinGiaoVienToolStripMenuItem_Click);
 			// 
 			// themLopHocToolStripMenuItem
 			// 
 			this.themLopHocToolStripMenuItem.Name = "themLopHocToolStripMenuItem";
-			this.themLopHocToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+			this.themLopHocToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
 			this.themLopHocToolStripMenuItem.Text = "Them Lop Hoc";
+			this.themLopHocToolStripMenuItem.Click += new System.EventHandler(this.themLopHocToolStripMenuItem_Click);
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.Control;
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel1.Location = new System.Drawing.Point(0, 30);
+			this.panel1.Location = new System.Drawing.Point(0, 28);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1386, 648);
+			this.panel1.Size = new System.Drawing.Size(1386, 650);
 			this.panel1.TabIndex = 12;
 			// 
 			// FormAdmin
