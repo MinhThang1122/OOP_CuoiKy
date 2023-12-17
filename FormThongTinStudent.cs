@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +14,14 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThongTinStudent : Form
 	{
-		public FormThongTinStudent()
+
+        public FormThongTinStudent()
 		{
 			InitializeComponent();
 		}
 
-		private void btnThi_Click(object sender, EventArgs e)
+
+        private void btnThi_Click(object sender, EventArgs e)
 		{
 			FormThi f = new FormThi();
 			f.ShowDialog();
@@ -29,5 +33,13 @@ namespace DoAn_CuoiKy
 			form.Show();
 			this.Hide();
 		}
-	}
+
+        private void FormThongTinStudent_Load(object sender, EventArgs e)
+        {
+    
+
+        }
+
+
+    }
 }

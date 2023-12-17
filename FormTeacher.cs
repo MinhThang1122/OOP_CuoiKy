@@ -180,7 +180,10 @@ namespace DoAn_CuoiKy
 			
 		}
 
+        private void btnThemCH_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

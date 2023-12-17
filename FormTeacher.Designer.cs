@@ -225,6 +225,7 @@
             this.btnThemCH.TabIndex = 7;
             this.btnThemCH.Text = "Thêm";
             this.btnThemCH.UseVisualStyleBackColor = false;
+            this.btnThemCH.Click += new System.EventHandler(this.btnThemCH_Click_1);
             // 
             // btnSua
             // 
@@ -269,7 +270,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Mã Môn";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-           
             // 
             // txtMaChuong
             // 

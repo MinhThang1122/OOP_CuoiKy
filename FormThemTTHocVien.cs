@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DoAn_CuoiKy
 {
@@ -17,6 +18,7 @@ namespace DoAn_CuoiKy
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();
 		HocVien hocVien = null;
+		string imagLocation = "";
 
 		public FormThemTTHocVien()
 		{
@@ -38,8 +40,9 @@ namespace DoAn_CuoiKy
 			dtaGridViewTTHocVien.Columns.Add("HoTen", "Ho Ten");
 			dtaGridViewTTHocVien.Columns.Add("DiaChi", "Dia Chi");
 			dtaGridViewTTHocVien.Columns.Add("MaUser", "Ma User");
+            dtaGridViewTTHocVien.Columns.Add("HinhAnh", "Hinh Anh");
 
-			foreach (HocVien a in y)
+            foreach (HocVien a in y)
 			{
 				DataGridViewRow row = new DataGridViewRow();
 				row.CreateCells(dtaGridViewTTHocVien);
@@ -47,7 +50,8 @@ namespace DoAn_CuoiKy
 				row.Cells[1].Value = a.HoTen;
 				row.Cells[2].Value = a.DiaChi + "";
 				row.Cells[3].Value = a.MaUser + "";
-				dtaGridViewTTHocVien.Rows.Add(row);
+                row.Cells[4].Value = a.HinhAnh + "";
+                dtaGridViewTTHocVien.Rows.Add(row);
 			}
 		}
 
@@ -57,45 +61,65 @@ namespace DoAn_CuoiKy
 			if (string.IsNullOrEmpty(txtMaHocVien.Text) || string.IsNullOrWhiteSpace(txtMaHocVien.Text)) return;
 			if (string.IsNullOrEmpty(txtHoTenHV.Text) || string.IsNullOrWhiteSpace(txtHoTenHV.Text)) return;
 			if (string.IsNullOrEmpty(txtDiaChiHV.Text) || string.IsNullOrWhiteSpace(txtDiaChiHV.Text)) return;
+            try
+            {
+				byte[] images = null;
+				FileStream stream = new FileStream(imagLocation, FileMode.Open, FileAccess.Read);
+				BinaryReader brs = new BinaryReader(stream);	
+				images = brs.ReadBytes((int)stream.Length);
 
-			//kiem tra xem co du lieu hay chua
-			string ma = txtMaHocVien.Text;
-			string hoTen = txtHoTenHV.Text;
-			string diaChi = txtDiaChiHV.Text;
-			string maUser = txtMaUserThamChieu.Text;
+                //kiem tra xem co du lieu hay chua
 
-			List<HocVien> listHV = dsHocVien.Where(t => t.MaHocVien == ma).ToList();
+                string ma = txtMaHocVien.Text;
+                string hoTen = txtHoTenHV.Text;
+                string diaChi = txtDiaChiHV.Text;
+                string maUser = txtMaUserThamChieu.Text;
+                string hinhAnh = picBoxHocVien.ImageLocation.ToString();
 
-			if (listHV.Count > 0)
-			{
-				MessageBox.Show("User nay da co vui long kiem tra lai");
-				return;
-			}
+                
+                List<HocVien> listHV = dsHocVien.Where(t => t.MaHocVien == ma).ToList();
 
-			//xu ly them
-			hocVien = new HocVien();
-			hocVien.MaHocVien = ma;
-			hocVien.HoTen = hoTen;
-			hocVien.DiaChi = diaChi;
-			hocVien.MaUser = maUser;
+                if (listHV.Count > 0)
+                {
+                    MessageBox.Show("User nay da co vui long kiem tra lai");
+                    return;
+                }
 
-			//them vao dsls
-			dsHocVien.Add(hocVien);
+                //xu ly them
+                hocVien = new HocVien();
+                hocVien.MaHocVien = ma;
+                hocVien.HoTen = hoTen;
+                hocVien.DiaChi = diaChi;
+                hocVien.MaUser = maUser;
+                hocVien.HinhAnh = images;
 
-			//them vao dtagridview
-			DataGridViewRow row = new DataGridViewRow();
-			row.CreateCells(dtaGridViewTTHocVien);
-			row.Cells[0].Value = ma;
-			row.Cells[1].Value = hoTen;
-			row.Cells[2].Value = diaChi;
-			row.Cells[3].Value = maUser;
-			dtaGridViewTTHocVien.Rows.Add(row);
 
-			//them vao csdl
-			db.HocViens.Add(hocVien);
-			db.SaveChanges();
 
-			MessageBox.Show("Them Thanh Cong");
+                //them vao dsls
+                dsHocVien.Add(hocVien);
+
+                //them vao dtagridview
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(dtaGridViewTTHocVien);
+                row.Cells[0].Value = ma;
+                row.Cells[1].Value = hoTen;
+                row.Cells[2].Value = diaChi;
+                row.Cells[3].Value = maUser;
+                row.Cells[4].Value = hinhAnh;
+                dtaGridViewTTHocVien.Rows.Add(row);
+
+                //them vao csdl
+                db.HocViens.Add(hocVien);
+                db.SaveChanges();
+
+                MessageBox.Show("Them Thanh Cong");
+
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message);
+            }
+           
 		}
 		private void dtaGridViewTTHocVien_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -109,10 +133,22 @@ namespace DoAn_CuoiKy
 			txtHoTenHV.Text = hocVien.HoTen;
 			txtDiaChiHV.Text = hocVien.DiaChi;
 			txtMaUserThamChieu.Text = hocVien.MaUser;
+            // Hiển thị hình ảnh từ dữ liệu byte[]
+            if (hocVien.HinhAnh != null)
+            {
+                MemoryStream ms = new MemoryStream(hocVien.HinhAnh);
+                picBoxHocVien.Image = Image.FromStream(ms);
+                picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                picBoxHocVien.Image = null; // Xóa hình ảnh nếu không có dữ liệu
+            }
 
-		}
 
-		private void btnXoaTTHocVien_Click(object sender, EventArgs e)
+        }
+
+        private void btnXoaTTHocVien_Click(object sender, EventArgs e)
 		{
 			if (hocVien == null) return;
 
@@ -172,8 +208,9 @@ namespace DoAn_CuoiKy
             f.Filter = "JPG (*.JPG)|*.jpg";
             if (f.ShowDialog() == DialogResult.OK)
             {
-                file = Image.FromFile(f.FileName);
-                picBoxHocVien.Image = file;
+               
+				imagLocation = f.FileName.ToString();
+				picBoxHocVien.ImageLocation = imagLocation;
             }
             picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
         }
