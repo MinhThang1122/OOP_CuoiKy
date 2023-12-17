@@ -19,12 +19,11 @@ namespace DoAn_CuoiKy
             InitializeComponent();
         }
 
-        CuoiKy_OOPEntities3 db = new CuoiKy_OOPEntities3();
+        CuoiKy_OOPEntities4 db = new CuoiKy_OOPEntities4();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         C_User User = null;
         CauHoi cauHoi = null;
-
         private void FormTeacher_Load(object sender, EventArgs e)
         {
 
@@ -35,14 +34,16 @@ namespace DoAn_CuoiKy
 			dataGridViewKQ.Columns.Add("MaChuong", "Ma Chuong");
 			dataGridViewKQ.Columns.Add("MaMonHoc", "Ma Mon Hoc");
 			dataGridViewKQ.Columns.Add("NoiDung", "Noi Dung");
-			foreach (CauHoi CH in x)
+			foreach (CauHoi CH in x )
 			{
 				DataGridViewRow row = new DataGridViewRow();
 				row.CreateCells(dataGridViewKQ);
 				row.Cells[0].Value = CH.MaCauHoi + "";
 				row.Cells[1].Value = CH.MaChuong + "";
+
 				
-				dataGridViewKQ.Columns[2].Width = 150;
+
+				dataGridViewKQ.Columns[3].Width = 150;
 				row.Cells[3].Value = CH.HinhAnhCauHoi;
 				dataGridViewKQ.Rows.Add(row);
 			}
@@ -71,7 +72,7 @@ namespace DoAn_CuoiKy
 			string macauhoi = txtMaCauHoi.Text;
 			string machuong = txtMaChuong.Text;
 			string madethi = txtMaMon.Text;
-			
+			string mamonhoc = txtMaMon.Text;
 
 			List<CauHoi> cauhoi = dsCauHoi.Where(t => t.MaCauHoi == macauhoi).ToList();
 
@@ -96,7 +97,8 @@ namespace DoAn_CuoiKy
 			row.Cells[0].Value = macauhoi;
 			row.Cells[1].Value = machuong;
 			row.Cells[2].Value = madethi;
-            row.Cells[3].Value = file;
+			
+            row.Cells[4].Value = file;
             dataGridViewKQ.Rows.Add(row);
 
 			db.CauHois.Add(cauHoi);
@@ -123,7 +125,7 @@ namespace DoAn_CuoiKy
 		private void btnTimKiem_Click(object sender, EventArgs e)
 		{
 			SqlDataAdapter da;
-			SqlConnection conn = new SqlConnection("Data Source=LAPTOP-7H1PG1MJ\\MSSQLSERVER01;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
+			SqlConnection conn = new SqlConnection("Data Source=DESKTOP-APT8J1L;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
 			da = new SqlDataAdapter("Select * From HocVien where MaHocVien = " + txtMaHS.Text, conn);
 			DataTable dt = new DataTable();
 			da.Fill(dt);
@@ -149,9 +151,9 @@ namespace DoAn_CuoiKy
 			//hien thi thong tin tren cac txt
 			cauHoi = dsCauHoi[index];
 			txtMaCauHoi.Text = cauHoi.MaCauHoi + "";
-			
 			txtMaChuong.Text = cauHoi.MaChuong;
 			txtMaMon.Text = cauHoi.MaCauHoi;
+			
 		}
 
 
@@ -186,7 +188,6 @@ namespace DoAn_CuoiKy
 
             cauHoi.MaCauHoi = txtMaCauHoi.Text;
             cauHoi.MaChuong = txtMaChuong.Text;
-            
 
             db.SaveChanges();
 
@@ -196,7 +197,7 @@ namespace DoAn_CuoiKy
             dataGridViewKQ.Rows[index].Cells[2].Value = machuong;
             dataGridViewKQ.Rows[index].Cells[3].Value = mamon;
 			dataGridViewKQ.Rows[index].Cells[4].Value = file;
-            MessageBox.Show("Sua thanh cong");
+			MessageBox.Show("Sua thanh cong");
         }
     }
 }

@@ -13,10 +13,10 @@ namespace DoAn_CuoiKy
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CuoiKy_OOPEntities3 : DbContext
+    public partial class CuoiKy_OOPEntities4 : DbContext
     {
-        public CuoiKy_OOPEntities3()
-            : base("name=CuoiKy_OOPEntities3")
+        public CuoiKy_OOPEntities4()
+            : base("name=CuoiKy_OOPEntities4")
         {
         }
     

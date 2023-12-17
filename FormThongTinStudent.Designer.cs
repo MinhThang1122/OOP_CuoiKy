@@ -33,7 +33,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbProfile = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.picBoxHocVien = new System.Windows.Forms.PictureBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.txtHoTenHV = new System.Windows.Forms.TextBox();
             this.txtMaHocVien = new System.Windows.Forms.TextBox();
             this.btnluu = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.lblMaLop = new System.Windows.Forms.Label();
             this.lblHoTen = new System.Windows.Forms.Label();
             this.lblMaHV = new System.Windows.Forms.Label();
-            this.picBoxHocVien = new System.Windows.Forms.PictureBox();
             this.gbLuyenThi.SuspendLayout();
             this.gbProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxHocVien)).BeginInit();
@@ -98,7 +98,7 @@
             // gbProfile
             // 
             this.gbProfile.Controls.Add(this.picBoxHocVien);
-            this.gbProfile.Controls.Add(this.textBox3);
+            this.gbProfile.Controls.Add(this.txtMaLop);
             this.gbProfile.Controls.Add(this.txtHoTenHV);
             this.gbProfile.Controls.Add(this.txtMaHocVien);
             this.gbProfile.Controls.Add(this.btnluu);
@@ -118,15 +118,24 @@
             this.gbProfile.TabStop = false;
             this.gbProfile.Text = "Thông tin cá nhân";
             // 
-            // textBox3
+            // picBoxHocVien
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(120, 189);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(122, 20);
-            this.textBox3.TabIndex = 11;
+            this.picBoxHocVien.BackColor = System.Drawing.Color.White;
+            this.picBoxHocVien.Location = new System.Drawing.Point(245, 21);
+            this.picBoxHocVien.Name = "picBoxHocVien";
+            this.picBoxHocVien.Size = new System.Drawing.Size(86, 115);
+            this.picBoxHocVien.TabIndex = 12;
+            this.picBoxHocVien.TabStop = false;
+            // 
+            // txtMaLop
+            // 
+            this.txtMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Location = new System.Drawing.Point(120, 189);
+            this.txtMaLop.Multiline = true;
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.ReadOnly = true;
+            this.txtMaLop.Size = new System.Drawing.Size(122, 20);
+            this.txtMaLop.TabIndex = 11;
             // 
             // txtHoTenHV
             // 
@@ -147,6 +156,7 @@
             this.txtMaHocVien.ReadOnly = true;
             this.txtMaHocVien.Size = new System.Drawing.Size(122, 20);
             this.txtMaHocVien.TabIndex = 9;
+            this.txtMaHocVien.TextChanged += new System.EventHandler(this.txtMaHocVien_TextChanged);
             // 
             // btnluu
             // 
@@ -229,15 +239,6 @@
             this.lblMaHV.TabIndex = 4;
             this.lblMaHV.Text = "Mã học viên:";
             // 
-            // picBoxHocVien
-            // 
-            this.picBoxHocVien.BackColor = System.Drawing.Color.White;
-            this.picBoxHocVien.Location = new System.Drawing.Point(245, 21);
-            this.picBoxHocVien.Name = "picBoxHocVien";
-            this.picBoxHocVien.Size = new System.Drawing.Size(86, 115);
-            this.picBoxHocVien.TabIndex = 12;
-            this.picBoxHocVien.TabStop = false;
-            // 
             // FormThongTinStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,7 +266,7 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.GroupBox gbProfile;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox txtMaLop;
 		private System.Windows.Forms.TextBox txtHoTenHV;
 		private System.Windows.Forms.TextBox txtMaHocVien;
 		private System.Windows.Forms.Button btnluu;
