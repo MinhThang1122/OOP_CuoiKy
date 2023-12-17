@@ -42,7 +42,7 @@ namespace DoAn_CuoiKy
 				row.Cells[0].Value = CH.MaCauHoi + "";
 				row.Cells[1].Value = CH.MaChuong + "";
 				
-				dataGridViewKQ.Columns[3].Width = 150;
+				dataGridViewKQ.Columns[2].Width = 150;
 				row.Cells[3].Value = CH.HinhAnhCauHoi;
 				dataGridViewKQ.Rows.Add(row);
 			}
@@ -96,8 +96,8 @@ namespace DoAn_CuoiKy
 			row.Cells[0].Value = macauhoi;
 			row.Cells[1].Value = machuong;
 			row.Cells[2].Value = madethi;
-			
-			dataGridViewKQ.Rows.Add(row);
+            row.Cells[3].Value = file;
+            dataGridViewKQ.Rows.Add(row);
 
 			db.CauHois.Add(cauHoi);
 			db.SaveChanges();
@@ -173,16 +173,6 @@ namespace DoAn_CuoiKy
             Form1 f = new Form1();
             f.Show();
             this.Close();
-        }
-
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			
-		}
-
-        private void btnThemCH_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
