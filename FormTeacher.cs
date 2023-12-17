@@ -174,6 +174,30 @@ namespace DoAn_CuoiKy
             f.Show();
             this.Close();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (cauHoi == null) return;
+            string macauhoi = txtMaCauHoi.Text;
+            string machuong = txtMaChuong.Text;
+            string mamon = txtMaMon.Text;
+			
+            
+
+            cauHoi.MaCauHoi = txtMaCauHoi.Text;
+            cauHoi.MaChuong = txtMaChuong.Text;
+            
+
+            db.SaveChanges();
+
+            //cap nhat len luoi
+            int index = dataGridViewKQ.CurrentRow.Index;
+            dataGridViewKQ.Rows[index].Cells[1].Value = macauhoi;
+            dataGridViewKQ.Rows[index].Cells[2].Value = machuong;
+            dataGridViewKQ.Rows[index].Cells[3].Value = mamon;
+			dataGridViewKQ.Rows[index].Cells[4].Value = file;
+            MessageBox.Show("Sua thanh cong");
+        }
     }
 }
 
