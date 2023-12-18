@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,12 @@ namespace DoAn_CuoiKy
         CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<DeThi> dsDeThi = new List<DeThi>();
+        List<MonHoc> dsMonHoc = new List<MonHoc>();
+        List<BaiLam> dsBaiLam = new List<BaiLam>();
+        BaiLam baiLam = null;
+        CauHoi cauHoi = null;
+        MonHoc monHoc = null;
+        
 
         public FormThi()
         {
@@ -23,12 +30,25 @@ namespace DoAn_CuoiKy
 
         private void FormThi_Load(object sender, EventArgs e)
         {
-
+                dsCauHoi = db.CauHois.ToList();
+                dsMonHoc = db.MonHocs.ToList();
+            
+                MemoryStream ms = new MemoryStream(dsCauHoi[0].HinhAnhCauHoi);
+                pictureBox1.Image = Image.FromStream(ms);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                txtMonHoc.Text = dsMonHoc[0].TenMonHoc;
+                
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

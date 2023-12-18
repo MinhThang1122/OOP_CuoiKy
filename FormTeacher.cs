@@ -26,6 +26,7 @@ namespace DoAn_CuoiKy
         List<Chuong> Chuongs = new List<Chuong>();
         C_User User = null;
         CauHoi cauHoi = null;
+        HocVien hocVien = null;
         Chuong chuong = null;
         string imgLocation = "";
         private void FormTeacher_Load(object sender, EventArgs e)
@@ -152,19 +153,32 @@ namespace DoAn_CuoiKy
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da;
-            SqlConnection conn = new SqlConnection("Data Source=ASUSGHE;Initial Catalog=CuoiKy_OOP;Integrated Security=True");
-            da = new SqlDataAdapter("Select * From HocVien where HoTen = " + txtTenHS.Text, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            da.Dispose();
-            dataGridViewHS.DataSource = dt;
+            string connectionString = "Data Source=ASUSGHE;Initial Catalog=CuoiKy_OOP;Integrated Security=True";
+            string maHocVien = txtMaHS.Text;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT * FROM HocVien WHERE MaHocVien = @MaHocVien";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaHocVien", maHocVien);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridViewHS.DataSource = dt;
+            }
+
+
         }
 
         private void FormTeacher_Load_1(object sender, EventArgs e)
         {
             //lay ds loai sach
             dsCauHoi = db.CauHois.ToList();
+            dsHocVien = db.HocViens.ToList();
 
             //hien thi len datagird
             loadCauHoi(dsCauHoi);
@@ -250,6 +264,11 @@ namespace DoAn_CuoiKy
         }
 
         private void dataGridViewHS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtMaHS_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -126,6 +126,7 @@
             this.txtMaHS.Name = "txtMaHS";
             this.txtMaHS.Size = new System.Drawing.Size(100, 22);
             this.txtMaHS.TabIndex = 3;
+            this.txtMaHS.TextChanged += new System.EventHandler(this.txtMaHS_TextChanged);
             // 
             // txtTenHS
             // 

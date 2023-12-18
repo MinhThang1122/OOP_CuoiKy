@@ -37,8 +37,6 @@
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.txtHoTenHV = new System.Windows.Forms.TextBox();
             this.txtMaHocVien = new System.Windows.Forms.TextBox();
-            this.btnluu = new System.Windows.Forms.Button();
-            this.btnSuaProfile = new System.Windows.Forms.Button();
             this.lboxMonHoc = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblMonHoc = new System.Windows.Forms.Label();
@@ -80,6 +78,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Toán",
+            "Anh"});
             this.comboBox1.Location = new System.Drawing.Point(87, 40);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 32);
@@ -101,8 +102,6 @@
             this.gbProfile.Controls.Add(this.txtMaLop);
             this.gbProfile.Controls.Add(this.txtHoTenHV);
             this.gbProfile.Controls.Add(this.txtMaHocVien);
-            this.gbProfile.Controls.Add(this.btnluu);
-            this.gbProfile.Controls.Add(this.btnSuaProfile);
             this.gbProfile.Controls.Add(this.lboxMonHoc);
             this.gbProfile.Controls.Add(this.flowLayoutPanel1);
             this.gbProfile.Controls.Add(this.lblMonHoc);
@@ -117,6 +116,7 @@
             this.gbProfile.TabIndex = 5;
             this.gbProfile.TabStop = false;
             this.gbProfile.Text = "Thông tin cá nhân";
+            this.gbProfile.Enter += new System.EventHandler(this.gbProfile_Enter);
             // 
             // picBoxHocVien
             // 
@@ -157,30 +157,6 @@
             this.txtMaHocVien.Size = new System.Drawing.Size(122, 20);
             this.txtMaHocVien.TabIndex = 9;
             this.txtMaHocVien.TextChanged += new System.EventHandler(this.txtMaHocVien_TextChanged);
-            // 
-            // btnluu
-            // 
-            this.btnluu.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnluu.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnluu.ForeColor = System.Drawing.Color.White;
-            this.btnluu.Location = new System.Drawing.Point(226, 333);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(75, 34);
-            this.btnluu.TabIndex = 8;
-            this.btnluu.Text = "Lưu";
-            this.btnluu.UseVisualStyleBackColor = false;
-            // 
-            // btnSuaProfile
-            // 
-            this.btnSuaProfile.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnSuaProfile.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaProfile.ForeColor = System.Drawing.Color.White;
-            this.btnSuaProfile.Location = new System.Drawing.Point(115, 333);
-            this.btnSuaProfile.Name = "btnSuaProfile";
-            this.btnSuaProfile.Size = new System.Drawing.Size(75, 34);
-            this.btnSuaProfile.TabIndex = 8;
-            this.btnSuaProfile.Text = "Sửa";
-            this.btnSuaProfile.UseVisualStyleBackColor = false;
             // 
             // lboxMonHoc
             // 
@@ -269,8 +245,6 @@
 		private System.Windows.Forms.TextBox txtMaLop;
 		private System.Windows.Forms.TextBox txtHoTenHV;
 		private System.Windows.Forms.TextBox txtMaHocVien;
-		private System.Windows.Forms.Button btnluu;
-		private System.Windows.Forms.Button btnSuaProfile;
 		private System.Windows.Forms.ListBox lboxMonHoc;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.Label lblMonHoc;

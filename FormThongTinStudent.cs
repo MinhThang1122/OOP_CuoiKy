@@ -21,6 +21,8 @@ namespace DoAn_CuoiKy
 		List<LopHoc> dsLopHoc = new List<LopHoc>();
 		List<MonHoc> dsMonHoc = new List<MonHoc>();
 		HocVien hocVien = null;
+        MonHoc monHoc = null;
+        
 		
         public FormThongTinStudent()
 		{
@@ -30,8 +32,14 @@ namespace DoAn_CuoiKy
 
         private void btnThi_Click(object sender, EventArgs e)
 		{
+            dsMonHoc = db.MonHocs.ToList();
+            string tenmonhoc = comboBox1.SelectedIndex.ToString();
 			FormThi f = new FormThi();
-			f.ShowDialog();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                f.ShowDialog();
+            }
+			
 		}
 
 		private void btnLogout_Click(object sender, EventArgs e)
@@ -43,26 +51,32 @@ namespace DoAn_CuoiKy
 
         private void FormThongTinStudent_Load(object sender, EventArgs e)
         {
-			
-			dsHocVien = db.HocViens.ToList();
 
-			//string mauser = string.Empty;
-			//List<HocVien> hocVien = dsHocVien.Where(t => t.MaUser == mauser).ToList();
+            dsHocVien = db.HocViens.ToList();
 
-            txtMaHocVien.Text = dsHocVien[0].MaHocVien;
-			txtHoTenHV.Text = dsHocVien[0].HoTen;
-            
-            
-            
+            //string mauser = string.Empty;
+            //List<HocVien> hocVien = dsHocVien.Where(t => t.MaUser == mauser).ToList();
 
-            //txtMaLop.Text = dsLopHoc[2].TenLopHoc;
-            //lboxMonHoc.Text = dsMonHoc[1].TenMonHoc;
+            txtMaHocVien.Text = dsHocVien[1].MaHocVien;
+            txtHoTenHV.Text = dsHocVien[1].HoTen;
+            txtMaLop.Text = dsHocVien[0].MaLopHoc;
+
+
+            MemoryStream ms = new MemoryStream(dsHocVien[1].HinhAnh);
+            picBoxHocVien.Image = Image.FromStream(ms);
+            picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
+            
         }
 		
 
         private void txtMaHocVien_TextChanged(object sender, EventArgs e)
         {
 			
+        }
+
+        private void gbProfile_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
