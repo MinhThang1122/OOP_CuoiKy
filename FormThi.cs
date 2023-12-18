@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
     public partial class FormThi : Form
     {
-        CuoiKy_OOPEntities4 db = new CuoiKy_OOPEntities4();
+        CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<DeThi> dsDeThi = new List<DeThi>();
 

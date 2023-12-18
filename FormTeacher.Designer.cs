@@ -73,6 +73,7 @@
             this.dataGridViewHS.RowTemplate.Height = 24;
             this.dataGridViewHS.Size = new System.Drawing.Size(628, 178);
             this.dataGridViewHS.TabIndex = 17;
+            this.dataGridViewHS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHS_CellContentClick);
             // 
             // dataGridViewKQ
             // 
@@ -187,6 +188,11 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
             this.comboBox1.Location = new System.Drawing.Point(124, 206);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(112, 24);

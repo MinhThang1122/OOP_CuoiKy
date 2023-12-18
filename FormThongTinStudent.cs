@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
+//using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -16,10 +16,11 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThongTinStudent : Form
 	{
-        CuoiKy_OOPEntities4 db = new CuoiKy_OOPEntities4();
+        CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
         List<HocVien> dsHocVien = new List<HocVien>();
 		List<LopHoc> dsLopHoc = new List<LopHoc>();
 		List<MonHoc> dsMonHoc = new List<MonHoc>();
+		HocVien hocVien = null;
 		
         public FormThongTinStudent()
 		{
@@ -45,15 +46,17 @@ namespace DoAn_CuoiKy
 			
 			dsHocVien = db.HocViens.ToList();
 
-			
+			//string mauser = string.Empty;
+			//List<HocVien> hocVien = dsHocVien.Where(t => t.MaUser == mauser).ToList();
 
-			List<HocVien> hocvien = dsHocVien.Where(t => t.MaUser == mauser).ToList();
+            txtMaHocVien.Text = dsHocVien[0].MaHocVien;
+			txtHoTenHV.Text = dsHocVien[0].HoTen;
+            
+            
+            
 
-            txtMaHocVien.Text = dsHocVien[1].MaHocVien;
-			txtHoTenHV.Text = dsHocVien[1].HoTen;
-
-			txtMaLop.Text = dsLopHoc[2].TenLopHoc;
-			lboxMonHoc.Text = dsMonHoc[1].TenMonHoc;
+            //txtMaLop.Text = dsLopHoc[2].TenLopHoc;
+            //lboxMonHoc.Text = dsMonHoc[1].TenMonHoc;
         }
 		
 

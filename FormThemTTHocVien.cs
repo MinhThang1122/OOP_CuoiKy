@@ -13,7 +13,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThemTTHocVien : Form
 	{
-		CuoiKy_OOPEntities4 db = new CuoiKy_OOPEntities4();
+		CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
 		List<C_User> dsUser = new List<C_User>();
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();
@@ -166,12 +166,19 @@ namespace DoAn_CuoiKy
 
 		private void btnSuaThongTinHV_Click(object sender, EventArgs e)
 		{
-			if (hocVien == null) return;
-			string hoTen = txtHoTenHV.Text;
-			string diaChi = txtDiaChiHV.Text;
-			string maUser = txtMaUserThamChieu.Text;
+            if (hocVien == null) return;
 
-			/*List<C_User> x = dsUser.Where(a => a.MaUser == maUser).ToList();
+            byte[] images = null;
+            FileStream stream = new FileStream(imagLocation, FileMode.Open, FileAccess.Read);
+            BinaryReader brs = new BinaryReader(stream);
+            images = brs.ReadBytes((int)stream.Length);
+
+            string hoTen = txtHoTenHV.Text;
+            string diaChi = txtDiaChiHV.Text;
+            string maUser = txtMaUserThamChieu.Text;
+            string hinhAnh = picBoxHocVien.ImageLocation.ToString();
+
+            /*List<C_User> x = dsUser.Where(a => a.MaUser == maUser).ToList();
 
 			if (x.Count != null)
 			{
@@ -179,19 +186,23 @@ namespace DoAn_CuoiKy
 				return;
 			}*/
 
-			hocVien.HoTen = txtHoTenHV.Text;
-			hocVien.DiaChi = txtDiaChiHV.Text;
-			hocVien.MaUser = txtMaUserThamChieu.Text;
 
-			db.SaveChanges();
 
-			//cap nhat len luoi
-			int index = dtaGridViewTTHocVien.CurrentRow.Index;
-			dtaGridViewTTHocVien.Rows[index].Cells[1].Value = hoTen;
-			dtaGridViewTTHocVien.Rows[index].Cells[2].Value = diaChi;
-			dtaGridViewTTHocVien.Rows[index].Cells[3].Value = maUser;
-			MessageBox.Show("Sua thanh cong");
-		}
+            hocVien.HoTen = txtHoTenHV.Text;
+            hocVien.DiaChi = txtDiaChiHV.Text;
+            hocVien.MaUser = txtMaUserThamChieu.Text;
+            hocVien.HinhAnh = images;
+
+            db.SaveChanges();
+
+            //cap nhat len luoi
+            int index = dtaGridViewTTHocVien.CurrentRow.Index;
+            dtaGridViewTTHocVien.Rows[index].Cells[1].Value = hoTen;
+            dtaGridViewTTHocVien.Rows[index].Cells[2].Value = diaChi;
+            dtaGridViewTTHocVien.Rows[index].Cells[3].Value = maUser;
+            dtaGridViewTTHocVien.Rows[index].Cells[4].Value = hinhAnh;
+            MessageBox.Show("Sua thanh cong");
+        }
 
 		private void btnLogout_Click(object sender, EventArgs e)
 		{
