@@ -20,7 +20,7 @@ namespace DoAn_CuoiKy
             InitializeComponent();
         }
 
-        CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
+        CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         List<Chuong> Chuongs = new List<Chuong>();
@@ -153,7 +153,7 @@ namespace DoAn_CuoiKy
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=ASUSGHE;Initial Catalog=CuoiKy_OOP;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-APT8J1L;Initial Catalog=CuoiKy_OOP;Integrated Security=True";
             string maHocVien = txtMaHS.Text;
 
             using (SqlConnection conn = new SqlConnection(connectionString))

@@ -12,7 +12,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThemTkUser : Form
 	{
-		CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
+		CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
 		List<C_User> dsUser = new List<C_User>();
 		List<HocVien> dsHocVien = new List<HocVien>();
 		List<GiaoVien> dsGiaoVien = new List<GiaoVien>();

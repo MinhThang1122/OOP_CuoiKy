@@ -16,7 +16,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThongTinStudent : Form
 	{
-        CuoiKy_OOPEntities6 db = new CuoiKy_OOPEntities6();
+        CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
         List<HocVien> dsHocVien = new List<HocVien>();
 		List<LopHoc> dsLopHoc = new List<LopHoc>();
 		List<MonHoc> dsMonHoc = new List<MonHoc>();

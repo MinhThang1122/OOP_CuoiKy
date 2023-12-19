@@ -15,10 +15,10 @@ namespace DoAn_CuoiKy
     public partial class CauHoi
     {
         public string MaCauHoi { get; set; }
-        public Nullable<int> DapAn { get; set; }
         public byte[] HinhAnhCauHoi { get; set; }
         public string MaChuong { get; set; }
         public string MaMonHoc { get; set; }
+        public Nullable<int> DapAn { get; set; }
     
         public virtual Chuong Chuong { get; set; }
         public virtual MonHoc MonHoc { get; set; }
