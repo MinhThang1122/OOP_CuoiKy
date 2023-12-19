@@ -51,7 +51,7 @@ namespace DoAn_CuoiKy
 						}
 						else
 						{
-							FormTeacher formTeacher = new FormTeacher();
+							FormTrangChuTeacher formTeacher = new FormTrangChuTeacher();
 							formTeacher.Show();
 							this.Hide();
 						}
