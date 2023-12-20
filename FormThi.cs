@@ -13,7 +13,7 @@ namespace DoAn_CuoiKy
 {
     public partial class FormThi : Form
     {
-        CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
+        CuoiKy_OOPEntities9 db = new CuoiKy_OOPEntities9();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<DeThi> dsDeThi = new List<DeThi>();
         List<MonHoc> dsMonHoc = new List<MonHoc>();
@@ -37,6 +37,7 @@ namespace DoAn_CuoiKy
                 pictureBox1.Image = Image.FromStream(ms);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 txtMonHoc.Text = dsMonHoc[0].TenMonHoc;
+            
                 
             
         }
@@ -49,6 +50,23 @@ namespace DoAn_CuoiKy
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            dsCauHoi = db.CauHois.ToList();
         }
     }
 }

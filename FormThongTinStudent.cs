@@ -16,7 +16,7 @@ namespace DoAn_CuoiKy
 {
 	public partial class FormThongTinStudent : Form
 	{
-        CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
+        CuoiKy_OOPEntities9 db = new CuoiKy_OOPEntities9();
         List<HocVien> dsHocVien = new List<HocVien>();
 		List<LopHoc> dsLopHoc = new List<LopHoc>();
 		List<MonHoc> dsMonHoc = new List<MonHoc>();
@@ -57,12 +57,12 @@ namespace DoAn_CuoiKy
             //string mauser = string.Empty;
             //List<HocVien> hocVien = dsHocVien.Where(t => t.MaUser == mauser).ToList();
 
-            txtMaHocVien.Text = dsHocVien[1].MaHocVien;
-            txtHoTenHV.Text = dsHocVien[1].HoTen;
+            txtMaHocVien.Text = dsHocVien[0].MaHocVien;
+            txtHoTenHV.Text = dsHocVien[0].HoTen;
             txtMaLop.Text = dsHocVien[0].MaLopHoc;
 
 
-            MemoryStream ms = new MemoryStream(dsHocVien[1].HinhAnh);
+            MemoryStream ms = new MemoryStream(dsHocVien[0].HinhAnh);
             picBoxHocVien.Image = Image.FromStream(ms);
             picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
             

@@ -12,15 +12,12 @@ namespace DoAn_CuoiKy
     using System;
     using System.Collections.Generic;
     
-    public partial class BaiLam
+    public partial class sysdiagram
     {
-        public string MaBaiLam { get; set; }
-        public string MaHocVien { get; set; }
-        public string MaDeThi { get; set; }
-        public string MaCauHoi { get; set; }
-        public Nullable<float> Diem { get; set; }
-    
-        public virtual DeThi DeThi { get; set; }
-        public virtual HocVien HocVien { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -22,9 +22,11 @@ namespace DoAn_CuoiKy
     
         public string MaDeThi { get; set; }
         public string MaMonHoc { get; set; }
+        public string MaCauHoi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BaiLam> BaiLams { get; set; }
+        public virtual CauHoi CauHoi { get; set; }
         public virtual MonHoc MonHoc { get; set; }
     }
 }

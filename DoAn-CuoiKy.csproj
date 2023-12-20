@@ -177,6 +177,9 @@
     <Compile Include="FormThemDeThi.Designer.cs">
       <DependentUpon>FormThemDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CuoiKy_OOP.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMaCauHoi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -38,15 +40,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewDeThi = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewCH = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMaCauHoi = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeThi)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +61,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(554, 250);
             this.panel1.TabIndex = 0;
+            // 
+            // txtMaCauHoi
+            // 
+            this.txtMaCauHoi.Location = new System.Drawing.Point(395, 33);
+            this.txtMaCauHoi.Multiline = true;
+            this.txtMaCauHoi.Name = "txtMaCauHoi";
+            this.txtMaCauHoi.Size = new System.Drawing.Size(112, 19);
+            this.txtMaCauHoi.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkViolet;
+            this.label1.Location = new System.Drawing.Point(311, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Mã Câu Hỏi";
             // 
             // panel3
             // 
@@ -164,27 +180,6 @@
             this.dataGridViewDeThi.TabIndex = 0;
             this.dataGridViewDeThi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDeThi_CellClick);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngXuấtToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1451, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.BackColor = System.Drawing.Color.DarkViolet;
-            this.đăngXuấtToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
-            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
-            // 
             // dataGridViewCH
             // 
             this.dataGridViewCH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -196,25 +191,6 @@
             this.dataGridViewCH.TabIndex = 2;
             this.dataGridViewCH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCH_CellClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label1.Location = new System.Drawing.Point(311, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Mã Câu Hỏi";
-            // 
-            // txtMaCauHoi
-            // 
-            this.txtMaCauHoi.Location = new System.Drawing.Point(395, 33);
-            this.txtMaCauHoi.Multiline = true;
-            this.txtMaCauHoi.Name = "txtMaCauHoi";
-            this.txtMaCauHoi.Size = new System.Drawing.Size(112, 19);
-            this.txtMaCauHoi.TabIndex = 24;
-            // 
             // FormThemDeThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,8 +199,6 @@
             this.Controls.Add(this.dataGridViewCH);
             this.Controls.Add(this.dataGridViewDeThi);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormThemDeThi";
             this.Text = "ThemDeThi";
             this.Load += new System.EventHandler(this.ThemDeThi_Load);
@@ -232,11 +206,8 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDeThi)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCH)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -252,8 +223,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewCH;
         private System.Windows.Forms.TextBox txtMaCauHoi;
         private System.Windows.Forms.Label label1;

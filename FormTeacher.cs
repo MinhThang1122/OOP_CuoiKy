@@ -20,7 +20,7 @@ namespace DoAn_CuoiKy
             InitializeComponent();
         }
 
-        CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
+        CuoiKy_OOPEntities9 db = new CuoiKy_OOPEntities9();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<HocVien> dsHocVien = new List<HocVien>();
         List<Chuong> Chuongs = new List<Chuong>();

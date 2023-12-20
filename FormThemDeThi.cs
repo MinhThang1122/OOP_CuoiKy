@@ -14,7 +14,7 @@ namespace DoAn_CuoiKy
 {
     public partial class FormThemDeThi : Form
     {
-        CuoiKy_OOPEntities7 db = new CuoiKy_OOPEntities7();
+        CuoiKy_OOPEntities9 db = new CuoiKy_OOPEntities9();
         List<CauHoi> dsCauHoi = new List<CauHoi>();
         List<MonHoc> dsMonHoc = new List<MonHoc>();
         List<DeThi> dsDeThi = new List<DeThi>();
@@ -30,7 +30,7 @@ namespace DoAn_CuoiKy
         private void ThemDeThi_Load(object sender, EventArgs e)
         {
             dsCauHoi = db.CauHois.ToList();
-            dsMonHoc = db.MonHocs.ToList();
+            dsDeThi = db.DeThis.ToList();
 
             loaddethi(dsDeThi);
             loadCauHoi(dsCauHoi);
@@ -46,8 +46,7 @@ namespace DoAn_CuoiKy
                 row.CreateCells(dataGridViewDeThi);
                 row.Cells[0].Value = DT.MaDeThi + "";
                 row.Cells[1].Value = DT.MaMonHoc + "";
-
-
+                row.Cells[2].Value = DT.MaCauHoi ;
                 dataGridViewDeThi.Rows.Add(row);
             }
         }
@@ -78,26 +77,23 @@ namespace DoAn_CuoiKy
         {
             if (string.IsNullOrEmpty(txtMaDeThi.Text) || string.IsNullOrWhiteSpace(txtMaDeThi.Text)) return;
             if (string.IsNullOrEmpty(txtMaMonHoc.Text) || string.IsNullOrWhiteSpace(txtMaMonHoc.Text)) return;
+            if (string.IsNullOrEmpty(txtMaCauHoi.Text) || string.IsNullOrWhiteSpace(txtMaCauHoi.Text)) return;
             //if (string.IsNullOrEmpty(txtMaCauHoi.Text) || string.IsNullOrWhiteSpace(txtMaCauHoi.Text)) return;
-            //try
-            //{
+            try
+            {
             //    byte[] images = null;
             //    FileStream stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
             //    BinaryReader brs = new BinaryReader(stream);
             //    images = brs.ReadBytes((int)stream.Length);
 
-                string madethi = txtMaDeThi.Text;
-                string mamonhoc = txtMaMonHoc.Text;
-                //string macauhoi = txtMaCauHoi.Text;
+            string madethi = txtMaDeThi.Text;
+            string mamonhoc = txtMaMonHoc.Text;
+            string macauhoi = txtMaCauHoi.Text;
                 
 
                 List<DeThi> dethi = dsDeThi.Where(t => t.MaDeThi == madethi).ToList();
 
-                if (dethi.Count > 0)
-                {
-                    MessageBox.Show("ma de thi nay bi trung");
-                    return;
-                }
+                
 
 
 
@@ -105,7 +101,7 @@ namespace DoAn_CuoiKy
                 deThi = new DeThi();
                 deThi.MaDeThi = madethi;
                 deThi.MaMonHoc = mamonhoc;
-                //cauHoi.MaCauHoi = macauhoi;
+                deThi.MaCauHoi = macauhoi;
 
 
 
@@ -118,18 +114,18 @@ namespace DoAn_CuoiKy
                 row.CreateCells(dataGridViewDeThi);
                 row.Cells[0].Value = madethi;
                 row.Cells[1].Value = mamonhoc;
-                //row.Cells[2].Value = macauhoi;
+                row.Cells[2].Value = macauhoi;
                 dataGridViewDeThi.Rows.Add(row);
 
                 db.DeThis.Add(deThi);
                 db.SaveChanges();
                 MessageBox.Show("Them De thi thanh cong");
 
-            //}
-            //catch (Exception ee)
-            //{
-            //    MessageBox.Show(ee.ToString());
-            //}
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
 
         private void dataGridViewDeThi_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -142,6 +138,7 @@ namespace DoAn_CuoiKy
             deThi = dsDeThi[index];
             txtMaDeThi.Text = deThi.MaDeThi + "";
             txtMaMonHoc.Text = deThi.MaMonHoc;
+            txtMaCauHoi.Text = deThi.MaCauHoi;
            
         }
 
@@ -153,6 +150,7 @@ namespace DoAn_CuoiKy
                 return;
             cauHoi = dsCauHoi[index];
             txtMaCauHoi.Text = cauHoi.MaCauHoi;
+            txtMaMonHoc.Text = cauHoi.MaMonHoc;
         }
 
         Image file;
@@ -195,18 +193,10 @@ namespace DoAn_CuoiKy
         {
             if (deThi == null) return;
 
-            byte[] images = null;
-            FileStream stream = new FileStream(imglocation, FileMode.Open, FileAccess.Read);
-            BinaryReader brs = new BinaryReader(stream);
-            images = brs.ReadBytes((int)stream.Length);
-            string madethi = txtMaDeThi.Text;
+            
             string mamonhoc = txtMaMonHoc.Text;
+            string macauhoi = txtMaCauHoi.Text;
 
-
-
-
-
-            deThi.MaDeThi = txtMaDeThi.Text;
             deThi.MaMonHoc = txtMaMonHoc.Text;
 
 
@@ -214,9 +204,8 @@ namespace DoAn_CuoiKy
 
             //cap nhat len luoi
             int index = dataGridViewDeThi.CurrentRow.Index;
-            dataGridViewDeThi.Rows[index].Cells[1].Value = madethi;
-            dataGridViewDeThi.Rows[index].Cells[2].Value = mamonhoc;
-
+            dataGridViewDeThi.Rows[index].Cells[1].Value = mamonhoc;
+            dataGridViewDeThi.Rows[index].Cells[2].Value = macauhoi;
             MessageBox.Show("Sua thanh cong");
         }
 

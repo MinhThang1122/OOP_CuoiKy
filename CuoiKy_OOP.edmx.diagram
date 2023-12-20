@@ -4,25 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e3c0965fc6514fe4b9b362e44a0046b7" Name="Diagram1">
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.C_User" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.BaiLam" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.CauHoi" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.Chuong" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.DeThi" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.GiaoVien" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.HocVien" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.LopHoc" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CuoiKy_OOPModel.MonHoc" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__GiaoVien__MaUser__5FB337D6" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__HocVien__MaUser__5EBF139D" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__BaiLam__MaDeThi__5CD6CB2B" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__BaiLam__MaHocVie__5BE2A6F2" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__CauHoi__MaChuong__5629CD9C" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__CauHoi__MaMonHoc__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__Chuong__MaMonHoc__534D60F1" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__DeThi__MaMonHoc__59063A47" ManuallyRouted="false" />
-        <AssociationConnector Association="CuoiKy_OOPModel.FK__HocVien__MaLopHo__5DCAEF64" ManuallyRouted="false" />
+      <Diagram DiagramId="e4a849c901394c54ae153680bcbf0609" Name="Diagram1">
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.C_User" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.BaiLam" Width="1.5" PointX="9.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.CauHoi" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.Chuong" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.DeThi" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.GiaoVien" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.HocVien" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.LopHoc" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.MonHoc" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuoiKy_OOPModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__GiaoVien__MaUser__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__HocVien__MaUser__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__BaiLam__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__BaiLam__MaHocVie__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__CauHoi__MaChuong__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__CauHoi__MaMonHoc__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__DeThi__MaCauHoi__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__Chuong__MaMonHoc__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__DeThi__MaMonHoc__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="CuoiKy_OOPModel.FK__HocVien__MaLopHo__3E52440B" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
