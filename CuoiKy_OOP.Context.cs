@@ -34,6 +34,5 @@ namespace DoAn_CuoiKy
         public virtual DbSet<HocVien> HocViens { get; set; }
         public virtual DbSet<LopHoc> LopHocs { get; set; }
         public virtual DbSet<MonHoc> MonHocs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

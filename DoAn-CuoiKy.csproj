@@ -171,9 +171,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>CuoiKy_OOP.tt</DependentUpon>
-    </Compile>
     <Compile Include="FormThemDeThi.cs">
       <SubType>Form</SubType>
     </Compile>
