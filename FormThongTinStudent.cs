@@ -56,16 +56,19 @@ namespace DoAn_CuoiKy
 
             //string mauser = string.Empty;
             //List<HocVien> hocVien = dsHocVien.Where(t => t.MaUser == mauser).ToList();
+            for (int i = 0; i < dsHocVien.Count; i++)
+            {
+                if (dsHocVien[i] != null)
+                {
+                    txtHoTenHV.Text = dsHocVien[i].HoTen;
+                    txtMaHocVien.Text = dsHocVien[i].MaHocVien;
+                    txtMaLop.Text = dsHocVien[i].MaLopHoc;
+                    MemoryStream ms = new MemoryStream(dsHocVien[i].HinhAnh);
+                    picBoxHocVien.Image = Image.FromStream(ms);
+                    picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
 
-            txtMaHocVien.Text = dsHocVien[0].MaHocVien;
-            txtHoTenHV.Text = dsHocVien[0].HoTen;
-            txtMaLop.Text = dsHocVien[0].MaLopHoc;
-
-
-            MemoryStream ms = new MemoryStream(dsHocVien[0].HinhAnh);
-            picBoxHocVien.Image = Image.FromStream(ms);
-            picBoxHocVien.SizeMode = PictureBoxSizeMode.StretchImage;
-            
         }
 		
 

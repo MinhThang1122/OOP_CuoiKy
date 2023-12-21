@@ -21,25 +21,29 @@ namespace DoAn_CuoiKy
         BaiLam baiLam = null;
         CauHoi cauHoi = null;
         MonHoc monHoc = null;
-        
+        private Dictionary<int, int> selectedAnswers = new Dictionary<int, int>();
+
+        private int currentQuestionIndex;
+
 
         public FormThi()
         {
             InitializeComponent();
+            currentQuestionIndex = 0;
         }
 
         private void FormThi_Load(object sender, EventArgs e)
         {
-                dsCauHoi = db.CauHois.ToList();
-                dsMonHoc = db.MonHocs.ToList();
-            
-                MemoryStream ms = new MemoryStream(dsCauHoi[0].HinhAnhCauHoi);
-                pictureBox1.Image = Image.FromStream(ms);
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                txtMonHoc.Text = dsMonHoc[0].TenMonHoc;
-            
-                
-            
+
+
+            dsCauHoi = db.CauHois.ToList();
+            dsMonHoc = db.MonHocs.ToList();
+            dsDeThi = db.DeThis.ToList();
+            txtDeThi.Text = dsDeThi[0].MaDeThi;
+            DisplayQuestion();
+
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,19 +58,63 @@ namespace DoAn_CuoiKy
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Show();
-            this.Close();
+            // Lưu trạng thái ComboBox vào biến selectedAnswers
+            if (!selectedAnswers.ContainsKey(currentQuestionIndex))
+            {
+                selectedAnswers.Add(currentQuestionIndex, comboBox1.SelectedIndex);
+            }
+            if (currentQuestionIndex < dsCauHoi.Count - 1)
+            {
+                currentQuestionIndex++;
+                DisplayQuestion();
+            }
+            button3.Visible = true;
+
+            if (currentQuestionIndex == 9)
+            {
+                button2.Visible = false;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (!selectedAnswers.ContainsKey(currentQuestionIndex))
+            {
+                selectedAnswers.Add(currentQuestionIndex, comboBox1.SelectedIndex);
+            }
+            if (currentQuestionIndex > 0)
+            {
+                currentQuestionIndex--;
+                DisplayQuestion();
+            }
+
+            if (currentQuestionIndex == 0)
+            {
+                button3.Visible = false;
+                button2.Visible = true;
+            }
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void DisplayQuestion()
         {
-            dsCauHoi = db.CauHois.ToList();
+            if (currentQuestionIndex < dsDeThi.Count)
+            {
+                DeThi deThi = dsDeThi[currentQuestionIndex];
+                CauHoi cauHoi = dsCauHoi.FirstOrDefault(c => c.MaCauHoi == deThi.MaCauHoi);
+                if (cauHoi != null)
+                {
+                    // Đặt lại giá trị chọn trong ComboBox
+                    comboBox1.SelectedIndex = selectedAnswers.ContainsKey(currentQuestionIndex)
+                        ? selectedAnswers[currentQuestionIndex]
+                        : -1;
+
+                    MemoryStream ms = new MemoryStream(cauHoi.HinhAnhCauHoi);
+                    pictureBox1.Image = Image.FromStream(ms);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    txtMonHoc.Text = cauHoi.MonHoc.TenMonHoc;
+                }
+            }
         }
     }
 }

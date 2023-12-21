@@ -82,6 +82,7 @@
             this.dataGridViewKQ.Size = new System.Drawing.Size(628, 311);
             this.dataGridViewKQ.TabIndex = 16;
             this.dataGridViewKQ.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtaGridViewKQ_CellClick);
+            this.dataGridViewKQ.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKQ_CellContentClick);
             // 
             // panel2
             // 
@@ -197,6 +198,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(112, 24);
             this.comboBox1.TabIndex = 20;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 

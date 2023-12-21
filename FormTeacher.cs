@@ -40,6 +40,7 @@ namespace DoAn_CuoiKy
             dataGridViewKQ.Columns.Add("MaMonHoc", "Ma Mon Hoc");
             dataGridViewKQ.Columns.Add("NoiDung", "Noi Dung");
             dataGridViewKQ.Columns.Add("DapAn", "Dap An");
+            
             foreach (CauHoi CH in x )
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -269,6 +270,16 @@ namespace DoAn_CuoiKy
         }
 
         private void txtMaHS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewKQ_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
